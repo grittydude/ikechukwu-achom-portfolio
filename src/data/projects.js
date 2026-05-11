@@ -165,7 +165,7 @@ export const PROJECTS = [
     status: "dev",
     statusLabel: "In Development",
     mockupTheme: "finance",
-    tech: ["Flutter", "Firebase", "Riverpod", "SQLite"],
+    tech: ["Flutter", "Firebase", "Riverpod", "Supbase", "Clean Architecture"],
     features: [
       "Expense and income tracking",
       "Financial insights and spending analysis",
