@@ -1,0 +1,42 @@
+/* ── DESIGN TOKENS ── */
+:root {
+  /* Colors */
+  --bg: #0b0f19;
+  --card: #111827;
+  --card2: #151e30;
+  --primary: #7c3aed;
+  --primary-glow: rgba(124, 58, 237, 0.35);
+  --primary-subtle: rgba(124, 58, 237, 0.12);
+  --accent: #22d3ee;
+  --accent-glow: rgba(34, 211, 238, 0.25);
+  --accent-subtle: rgba(34, 211, 238, 0.08);
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(124, 58, 237, 0.3);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #7c3aed, #5b21b6);
+  --gradient-accent: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  --gradient-hero: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
+
+  /* Typography */
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Spacing */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+
+  /* Motion */
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Section padding */
+  --section-py: 120px;
+  --section-px: 5vw;
+  --max-width: 1200px;
+}
