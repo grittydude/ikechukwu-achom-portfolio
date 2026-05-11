@@ -16,9 +16,9 @@ export default function Footer() {
         </p>
 
         <div className={styles.socials}>
-          <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="GitHub">
+          {/* <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="GitHub">
             <IconGitHub size={16} />
-          </a>
+          </a> */}
           <a href={`mailto:${PERSONAL.email}`} className="social-btn" aria-label="Email">
             <IconEmail size={16} />
           </a>

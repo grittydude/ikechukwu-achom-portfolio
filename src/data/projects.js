@@ -110,7 +110,7 @@ export const PROJECTS = [
     description:
       "A location-based web and mobile platform that helps users discover shops and businesses within a city. Built to improve local business visibility and community recommendations, with Eket serving as the initial case study and launch market.",
     status: "live",
-    statusLabel: "Personal Project",
+    statusLabel: "Personal Project - In Development",
     mockupTheme: "business",
     tech: ["Flutter", "Firebase", "Google Maps API", "Riverpod", "REST API"],
     features: [
@@ -119,6 +119,7 @@ export const PROJECTS = [
       "Location-based search and listings",
     ],
     githubUrl: "https://github.com/grittydude",
+    liveLink: "https://chota.app",
   },
   {
     id: "blood-donation",
@@ -135,14 +136,16 @@ export const PROJECTS = [
       "Location-based donor discovery",
     ],
     githubUrl: "https://github.com/grittydude",
+    liveLink: "https://appetize.io/app/b_nxuludyeiq5wxym7gkoqaoc33y",
+    caseStudy: true
   },
   {
     id: "dedline",
     title: "Dedline",
     description:
-      "A productivity and subscription management application that helps users track important deadlines, subscriptions, and renewal dates. Designed with smart reminders and clean task management workflows.",
+      "A productivity management application that helps users track important deadlines, subscriptions, and renewal dates. Designed with smart reminders and clean task management workflows.",
     status: "dev",
-    statusLabel: "In Development",
+    statusLabel: "Personal Project",
     mockupTheme: "productivity",
     tech: ["Flutter", "Supabase", "Riverpod", "Freezed", "Clean Arch"],
     features: [
@@ -150,7 +153,9 @@ export const PROJECTS = [
       "Smart reminders and notifications",
       "Clean and intuitive productivity dashboard",
     ],
-    githubUrl: "https://github.com/grittydude/dedline",
+    githubUrl: "https://github.com/theteemofficial/dedline",
+    liveLink: "https://appetize.io/app/b_rx6upyfwsb6v7fyrwzulwjfb4i",
+    caseStudy: true
   },
   {
     id: "legogi",
@@ -160,7 +165,7 @@ export const PROJECTS = [
     status: "dev",
     statusLabel: "In Development",
     mockupTheme: "finance",
-    tech: ["Flutter", "Firebase", "Bloc", "SQLite"],
+    tech: ["Flutter", "Firebase", "Riverpod", "SQLite"],
     features: [
       "Expense and income tracking",
       "Financial insights and spending analysis",

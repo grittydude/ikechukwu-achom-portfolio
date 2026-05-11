@@ -55,9 +55,9 @@ function ProjectCard({ project, delay }) {
             {project.caseStudy && (
               <button
                 className="btn btn-outline btn-sm"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>  openLink(project.liveLink)}
               >
-                📄 Case Study
+                📄 View Project
               </button>
             )}
           </div>

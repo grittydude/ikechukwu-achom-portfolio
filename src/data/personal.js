@@ -6,8 +6,8 @@ export const PERSONAL = {
   email: "ikechukwu.a.achom@gmail.com",
   whatsapp: "+234 810 950 7906",
   whatsappHref: "https://wa.me/2348109507906",
-  github: "https://github.com/grittydude",
-  githubHandle: "github.com/grittydude",
+  //github: "https://github.com/grittydude",
+  //githubHandle: "github.com/grittydude",
   headline:
     "Building High-Performance Flutter Applications with Clean Architecture & Exceptional UX.",
   subheadline:
