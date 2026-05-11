@@ -36,9 +36,23 @@ function ContactForm() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //     setSent(true);
+  //   }, 1400);
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    const res = await fetch("https://formspree.io/f/xqenwpke", {
+      method: "POST",
+      body: new FormData(e.target),
+      headers: { Accept: "application/json" },
+    });
+    setSent(res.ok);
     setTimeout(() => {
       setLoading(false);
       setSent(true);
@@ -56,12 +70,21 @@ function ContactForm() {
           </div>
           <div className={styles.group}>
             <label htmlFor="email">Email Address</label>
-            <input id="email" type="email" placeholder="hello@example.com" required />
+            <input
+              id="email"
+              type="email"
+              placeholder="hello@example.com"
+              required
+            />
           </div>
         </div>
         <div className={styles.group}>
           <label htmlFor="project">Project Type</label>
-          <input id="project" type="text" placeholder="e.g. Flutter App, Consultation, Full-time Role" />
+          <input
+            id="project"
+            type="text"
+            placeholder="e.g. Flutter App, Consultation, Full-time Role"
+          />
         </div>
         <div className={styles.group}>
           <label htmlFor="message">Message</label>
@@ -121,8 +144,12 @@ export default function Contact() {
 
             <div className={styles.responseBox}>
               <div className={styles.responseTitle}>⚡ Response Time</div>
-              <div className={styles.responseVal}>Typically within 24 hours</div>
-              <div className={styles.responseSub}>Available for remote projects worldwide</div>
+              <div className={styles.responseVal}>
+                Typically within 24 hours
+              </div>
+              <div className={styles.responseSub}>
+                Available for remote projects worldwide
+              </div>
             </div>
           </Reveal>
 
