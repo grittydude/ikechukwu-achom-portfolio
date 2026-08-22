@@ -47,6 +47,7 @@ export const PERSONAL = {
   ],
   navLinks: [
     { label: "About", href: "#about" },
+    { label: "Author", href: "#author" },
     { label: "Stack", href: "#tech" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },

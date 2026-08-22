@@ -8,6 +8,7 @@ import { ScrollProgressBar, BackToTop } from "./components/layout/ScrollWidgets"
 import Hero from "./components/sections/Hero";
 import StatsBar from "./components/sections/StatsBar";
 import About from "./components/sections/About";
+import Author from "./components/sections/Author";
 import TechStack from "./components/sections/TechStack";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
@@ -26,6 +27,7 @@ export default function App() {
         <Hero />
         <StatsBar />
         <About />
+        <Author />
         <TechStack />
         <Projects />
         <Experience />
