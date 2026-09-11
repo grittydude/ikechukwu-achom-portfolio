@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import "./styles/tokens.css";
 import "./styles/base.css";
 import "./styles/utilities.css";
@@ -5,34 +7,35 @@ import "./styles/utilities.css";
 import Loader from "./components/sections/Loader";
 import Navbar from "./components/layout/Navbar";
 import { ScrollProgressBar, BackToTop } from "./components/layout/ScrollWidgets";
-import Hero from "./components/sections/Hero";
-import StatsBar from "./components/sections/StatsBar";
-import About from "./components/sections/About";
-import Author from "./components/sections/Author";
-import TechStack from "./components/sections/TechStack";
-import Projects from "./components/sections/Projects";
-import Experience from "./components/sections/Experience";
-import Testimonials from "./components/sections/Testimonials";
-import Contact from "./components/sections/Contact";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import Footer from "./components/layout/Footer";
+
+import Home from "./pages/Home";
+import Books from "./pages/Books";
+import BookDetail from "./pages/BookDetail";
+import Dedline from "./pages/Dedline";
+import Ideas from "./pages/Ideas";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
     <>
       <Loader />
       <ScrollProgressBar />
+      <ScrollToTop />
       <Navbar />
 
       <main>
-        <Hero />
-        <StatsBar />
-        <About />
-        <Author />
-        <TechStack />
-        <Projects />
-        <Experience />
-        {/* <Testimonials /> */}
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/books/:slug" element={<BookDetail />} />
+          <Route path="/dedline" element={<Dedline />} />
+          <Route path="/ideas" element={<Ideas />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
 
       <Footer />

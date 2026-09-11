@@ -1,43 +1,39 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { useNavScroll } from "../../hooks/useNavScroll";
 import { PERSONAL } from "../../data/personal";
-import { scrollToSection } from "../../utils/helpers";
-import { IconGitHub, IconEmail, IconWhatsApp } from "../ui/Icons";
+import { IconEmail, IconWhatsApp } from "../ui/Icons";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const scrolled = useNavScroll(50);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleNav = (e, href) => {
-    e.preventDefault();
-    setMenuOpen(false);
-    scrollToSection(href);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-        <a href="#hero" className={styles.logo} onClick={(e) => handleNav(e, "#hero")}>
+        <Link to="/" className={styles.logo} onClick={closeMenu}>
           {PERSONAL.name}.
-        </a>
+        </Link>
 
         <ul className={styles.links}>
           {PERSONAL.navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={(e) => handleNav(e, link.href)}>
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                end={link.to === "/"}
+                className={({ isActive }) => (isActive ? styles.active : undefined)}
+              >
                 {link.label}
-              </a>
+              </NavLink>
             </li>
           ))}
           <li>
-            <a
-              href="#contact"
-              className={styles.cta}
-              onClick={(e) => handleNav(e, "#contact")}
-            >
+            <Link to="/about#contact" className={styles.cta}>
               Let's Talk
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -56,17 +52,14 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`${styles.mobile} ${menuOpen ? styles.mobileOpen : ""}`} aria-hidden={!menuOpen}>
         {PERSONAL.navLinks.map((link) => (
-          <a key={link.href} href={link.href} onClick={(e) => handleNav(e, link.href)}>
+          <NavLink key={link.to} to={link.to} end={link.to === "/"} onClick={closeMenu}>
             {link.label}
-          </a>
+          </NavLink>
         ))}
-        <a href="#contact" className={styles.mobileCta} onClick={(e) => handleNav(e, "#contact")}>
+        <Link to="/about#contact" className={styles.mobileCta} onClick={closeMenu}>
           Let's Talk
-        </a>
+        </Link>
         <div className={styles.mobileSocials}>
-          <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer" className="social-btn">
-            <IconGitHub />
-          </a>
           <a href={`mailto:${PERSONAL.email}`} className="social-btn">
             <IconEmail />
           </a>

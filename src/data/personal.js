@@ -46,11 +46,10 @@ export const PERSONAL = {
     },
   ],
   navLinks: [
-    { label: "About", href: "#about" },
-    { label: "Author", href: "#author" },
-    { label: "Stack", href: "#tech" },
-    { label: "Projects", href: "#projects" },
-    { label: "Experience", href: "#experience" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Home", to: "/" },
+    { label: "Books", to: "/books" },
+    { label: "Dedline", to: "/dedline" },
+    { label: "Ideas", to: "/ideas" },
+    { label: "About", to: "/about" },
   ],
 };

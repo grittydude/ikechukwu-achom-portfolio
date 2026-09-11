@@ -107,6 +107,7 @@ export const PROJECTS = [
   {
     id: "chota",
     title: "Chota",
+    type: "mobile",
     description:
       "A location-based web and mobile platform that helps users discover shops and businesses within a city. Built to improve local business visibility and community recommendations, with Eket serving as the initial case study and launch market.",
     status: "live",
@@ -124,6 +125,7 @@ export const PROJECTS = [
   {
     id: "blood-donation",
     title: "Blood Donation App",
+    type: "mobile",
     description:
       "A mobile platform designed to connect blood donors with recipients and healthcare organisations. Focused on simplifying emergency blood requests, donor accessibility, and community health support.",
     status: "live",
@@ -142,8 +144,9 @@ export const PROJECTS = [
   {
     id: "dedline",
     title: "Dedline",
+    type: "mobile",
     description:
-      "A productivity management application that helps users track important deadlines, subscriptions, and renewal dates. Designed with smart reminders and clean task management workflows.",
+      "A cross-platform mobile app (built with Flutter) that helps users track important deadlines, subscriptions, and renewal dates. Designed with smart reminders and a clean task management workflow.",
     status: "dev",
     statusLabel: "Personal Project",
     mockupTheme: "productivity",
@@ -160,6 +163,7 @@ export const PROJECTS = [
   {
     id: "legogi",
     title: "Legogi",
+    type: "mobile",
     description:
       "A personal finance application that helps users track expenses, monitor spending habits, and manage financial activities through a clean and user-friendly interface.",
     status: "dev",
@@ -176,6 +180,7 @@ export const PROJECTS = [
   {
     id: "vanboss",
     title: "Vanboss",
+    type: "mobile",
     description:
       "A logistics and delivery mobile application built to simplify pickup and drop-off operations through seamless booking workflows, real-time tracking, and scalable business management features.",
     status: "confidential",
@@ -192,6 +197,7 @@ export const PROJECTS = [
   {
     id: "soloride",
     title: "Soloride",
+    type: "mobile",
     description:
       "A client-based mobility platform focused on seamless transportation experiences, scalable booking systems, and real-time operational workflows.",
     status: "confidential",
@@ -203,6 +209,63 @@ export const PROJECTS = [
       "Location and map integration",
       "Scalable and responsive architecture",
     ],
-    githubUrl: null,    
+    githubUrl: null,
+  },
+  {
+    id: "king-of-glory-healthcare",
+    title: "King of Glory Healthcare",
+    type: "web",
+    description:
+      "A website for King of Glory Healthcare, a mental health clinic based in Clinton, Maryland — built to introduce their services and give patients a clear way to learn about the practice online.",
+    status: "live",
+    statusLabel: "Client Project",
+    mockupTheme: "web-healthcare",
+    tech: ["Custom Web Development"],
+    features: [
+      "Service and practice information for patients",
+      "Clean, accessible layout for a healthcare audience",
+      "Live, in production",
+    ],
+    githubUrl: null,
+    liveLink: "https://kingofgloryhealthcare.com/",
+    caseStudy: true,
+  },
+  {
+    id: "house-on-the-rock-eket",
+    title: "House on the Rock, Eket",
+    type: "web",
+    description:
+      "A website for House on the Rock, Eket — a church community site built to welcome visitors, share the congregation's mission, and communicate service times and information.",
+    status: "live",
+    statusLabel: "Community Project",
+    mockupTheme: "web-community",
+    tech: ["Custom Web Development"],
+    features: [
+      "Service times and visitor information",
+      "Mission and community messaging",
+      "Live, in production",
+    ],
+    githubUrl: null,
+    liveLink: "https://hotreket.com/",
+    caseStudy: true,
+  },
+  {
+    id: "bezimeni-resources",
+    title: "Bezimeni Resources",
+    type: "web",
+    description:
+      "A website for Bezimeni Resources, which helps science and engineering graduates bridge the gap between academic learning and industry-ready skills through practical, industry-focused training.",
+    status: "live",
+    statusLabel: "Client Project",
+    mockupTheme: "web-training",
+    tech: ["Custom Web Development"],
+    features: [
+      "Program and training information for graduates",
+      "Clear positioning for a career-development audience",
+      "Live, in production",
+    ],
+    githubUrl: null,
+    liveLink: "https://bezimeniresources.com/",
+    caseStudy: true,
   },
 ];

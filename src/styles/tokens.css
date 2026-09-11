@@ -1,36 +1,55 @@
 /* ── DESIGN TOKENS ── */
 :root {
-  /* Colors */
-  --bg: #0b0f19;
-  --card: #111827;
-  --card2: #151e30;
-  --primary: #7c3aed;
-  --primary-glow: rgba(124, 58, 237, 0.35);
-  --primary-subtle: rgba(124, 58, 237, 0.12);
-  --accent: #22d3ee;
-  --accent-glow: rgba(34, 211, 238, 0.25);
-  --accent-subtle: rgba(34, 211, 238, 0.08);
-  --text: #f9fafb;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
+  /* Base neutrals */
+  --bg: #0b0b10;
+  --card: #131217;
+  --card2: #18161d;
+  --text: #f4f1ea;
+  --text-muted: #a8a29a;
+  --text-dim: #6f6a63;
+
+  /* Sitewide primary — Mindset gold, promoted to the parent-brand color */
+  --primary: #e8a33d;
+  --primary-glow: rgba(232, 163, 61, 0.35);
+  --primary-subtle: rgba(232, 163, 61, 0.12);
+  --accent: #f2c572;
+  --accent-glow: rgba(242, 197, 114, 0.25);
+  --accent-subtle: rgba(242, 197, 114, 0.08);
 
   /* Borders */
-  --border: rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(124, 58, 237, 0.3);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(232, 163, 61, 0.32);
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #7c3aed, #5b21b6);
-  --gradient-accent: linear-gradient(135deg, #22d3ee, #0ea5e9);
-  --gradient-hero: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
+  /* Gradients (sitewide / Mindset) */
+  --gradient-primary: linear-gradient(135deg, #e8a33d, #c9772a);
+  --gradient-accent: linear-gradient(135deg, #f2c572, #e8a33d);
+  --gradient-hero: linear-gradient(135deg, #e8a33d 0%, #f2c572 100%);
+
+  /* Pillar accents — used only on each product's own page/card */
+  --pillar-mindset: #e8a33d;
+  --pillar-mindset-glow: rgba(232, 163, 61, 0.3);
+  --pillar-mindset-subtle: rgba(232, 163, 61, 0.12);
+
+  --pillar-discipline: #c1502e;
+  --pillar-discipline-glow: rgba(193, 80, 46, 0.3);
+  --pillar-discipline-subtle: rgba(193, 80, 46, 0.12);
+
+  --pillar-execution: #7c3aed;
+  --pillar-execution-accent: #22d3ee;
+  --pillar-execution-glow: rgba(124, 58, 237, 0.35);
+  --pillar-execution-subtle: rgba(124, 58, 237, 0.12);
+  --pillar-execution-gradient: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
 
   /* Typography */
   --font-display: "Syne", sans-serif;
   --font-body: "DM Sans", sans-serif;
+  --font-editorial: "Fraunces", serif;
 
   /* Spacing */
   --radius: 16px;
   --radius-sm: 8px;
   --radius-lg: 24px;
+  --radius-pill: 100px;
 
   /* Motion */
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);

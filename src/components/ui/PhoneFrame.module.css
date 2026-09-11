@@ -1,0 +1,158 @@
+.phoneWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glow {
+  position: absolute;
+  inset: -15% -25%;
+  background: var(--pillar-execution-gradient);
+  filter: blur(70px);
+  opacity: 0.35;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.phone {
+  position: relative;
+  z-index: 1;
+  width: 240px;
+  border-radius: 34px;
+  padding: 12px;
+  background: linear-gradient(160deg, #1b1424, #100c16);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+.notch {
+  width: 70px;
+  height: 16px;
+  margin: 0 auto 10px;
+  border-radius: 100px;
+  background: #100c16;
+}
+
+.screen {
+  border-radius: 22px;
+  background: linear-gradient(165deg, #17101f, #0d0a12);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.signal {
+  width: 30px;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  background: var(--pillar-execution-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bell {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.urgent { background: #f87171; box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.18); }
+.dot.soon   { background: var(--pillar-execution-accent); box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15); }
+.dot.fine   { background: #4ade80; box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.15); }
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.rowLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowDue {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.floatBadge {
+  position: relative;
+  z-index: 1;
+  margin-top: -16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.floatDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pillar-execution-accent);
+}
+
+@media (max-width: 480px) {
+  .phone {
+    width: 200px;
+  }
+}

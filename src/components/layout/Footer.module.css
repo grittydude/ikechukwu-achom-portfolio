@@ -1,20 +1,25 @@
 .footer {
   background: var(--card);
   border-top: 1px solid var(--border);
-  padding: 48px 5vw;
+  padding: 64px 5vw 0;
 }
 
-.inner {
+.top {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  gap: 60px;
   flex-wrap: wrap;
-  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.brand {
+  max-width: 280px;
 }
 
 .logo {
+  display: inline-block;
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 800;
@@ -27,12 +32,7 @@
 .tagline {
   font-size: 13px;
   color: var(--text-dim);
-  margin-top: 4px;
-}
-
-.copy {
-  font-size: 13px;
-  color: var(--text-dim);
+  margin: 8px 0 20px;
 }
 
 .socials {
@@ -40,9 +40,58 @@
   gap: 10px;
 }
 
-@media (max-width: 600px) {
-  .inner {
+.columns {
+  display: flex;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+.column a {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.column a:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+.copy {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 700px) {
+  .top {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 40px;
+  }
+  .brand {
+    max-width: 100%;
+  }
+  .columns {
+    gap: 40px 32px;
   }
 }

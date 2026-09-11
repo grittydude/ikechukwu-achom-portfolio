@@ -31,6 +31,99 @@
 .edtech { background: linear-gradient(135deg, #130f1e, #1a0f2e, #0f0f1e); }
 .chat   { background: linear-gradient(135deg, #0d1117, #111827, #0d1117); }
 .client { background: linear-gradient(135deg, #111827, #1f2937, #111827); }
+.web-healthcare { background: linear-gradient(135deg, #0a1f22, #0f2b2e, #0a1f22); }
+.web-community  { background: linear-gradient(135deg, #241a0a, #2e230f, #241a0a); }
+.web-training   { background: linear-gradient(135deg, #1f120e, #2e150f, #1f120e); }
+
+/* ── Web (browser-frame) mockup ── */
+.browserWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+}
+
+.dotRed, .dotYellow, .dotGreen {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dotRed { background: #ef4444; }
+.dotYellow { background: #eab308; }
+.dotGreen { background: #22c55e; }
+
+.urlPill {
+  flex: 1;
+  height: 10px;
+  margin-left: 8px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  max-width: 140px;
+}
+
+.browserBody {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.webNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.webLogo {
+  width: 20px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+.webNavLink {
+  width: 24px;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.webHero {
+  height: 44px;
+  border-radius: 8px;
+  background: var(--accent);
+  opacity: 0.18;
+}
+
+.webCards {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.webCard {
+  flex: 1;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
 /* Screen layout */
 .screenWrap {

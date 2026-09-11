@@ -52,12 +52,12 @@ function ProjectCard({ project, delay }) {
                 <IconGitHub size={14} /> GitHub
               </button>
             )}
-            {project.caseStudy && (
+            {project.caseStudy && project.liveLink && (
               <button
                 className="btn btn-outline btn-sm"
-                onClick={() =>  openLink(project.liveLink)}
+                onClick={() => openLink(project.liveLink)}
               >
-                📄 View Project
+                {project.type === "web" ? "🌐 Visit Live Site" : "📄 View Project"}
               </button>
             )}
           </div>

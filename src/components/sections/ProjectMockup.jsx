@@ -14,6 +14,33 @@ export default function ProjectMockup({ theme, isConfidential }) {
 }
 
 function MockupContent({ theme }) {
+  if (theme?.startsWith("web-")) {
+    return (
+      <div className={`${styles.browserWrap} ${styles[theme]}`}>
+        <div className={styles.browserBar}>
+          <span className={styles.dotRed} />
+          <span className={styles.dotYellow} />
+          <span className={styles.dotGreen} />
+          <div className={styles.urlPill} />
+        </div>
+        <div className={styles.browserBody}>
+          <div className={styles.webNav}>
+            <div className={styles.webLogo} />
+            <div className={styles.webNavLink} />
+            <div className={styles.webNavLink} />
+            <div className={styles.webNavLink} />
+          </div>
+          <div className={styles.webHero} />
+          <div className={styles.webCards}>
+            <div className={styles.webCard} />
+            <div className={styles.webCard} />
+            <div className={styles.webCard} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (theme === "client") {
     return (
       <div className={styles.confidentialCenter}>

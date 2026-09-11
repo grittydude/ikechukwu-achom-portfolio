@@ -1,0 +1,123 @@
+.page {
+  padding-top: 72px;
+}
+
+.intro .section-inner {
+  padding-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding-bottom: var(--section-py);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pillar-color, var(--border-accent));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.coverWrap {
+  padding: 40px 40px 0;
+  display: flex;
+  justify-content: center;
+  background: var(--card2);
+}
+
+.cover {
+  width: 160px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.coverPlaceholder {
+  width: 160px;
+  height: 230px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(160deg, var(--pillar-color, var(--card2)), transparent);
+  border: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.coverPlaceholder span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pillar {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pillar-color, var(--accent));
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.blurb {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.status {
+  align-self: flex-start;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.statusLive {
+  background: var(--primary-subtle);
+  color: var(--accent);
+}
+
+.statusSoon {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-dim);
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

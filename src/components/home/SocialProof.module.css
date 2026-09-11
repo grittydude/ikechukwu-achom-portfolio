@@ -1,0 +1,50 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  height: 100%;
+  padding: 32px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--pillar-color, var(--primary));
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pillarTag {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pillar-color, var(--accent));
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--pillar-color, var(--border));
+}
+
+.quote {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-style: italic;
+  flex: 1;
+}
+
+.role {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  font-style: normal;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
