@@ -1,5 +1,5 @@
 import { PROJECT_KINDS, hasCaseStudy } from "../../data/projects";
-import { SHOW_SOURCE_LINKS } from "../../data/site";
+import { SHOW_SOURCE_LINKS } from "../../data/settings";
 import ProjectVisual from "./ProjectVisual";
 import SmartLink from "../shared/SmartLink";
 import Reveal from "../ui/Reveal";

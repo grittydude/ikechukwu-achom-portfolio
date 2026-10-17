@@ -1,0 +1,39 @@
+{
+  "order": 100,
+  "title": "Radio Basar",
+  "tagline": "Online radio app",
+  "kind": "client",
+  "platform": "Mobile",
+  "status": "Client project",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "An online radio app. I built the streaming feature and set up the client's streaming service.",
+  "myRole": "Mobile developer",
+  "stack": [
+    "Audio streaming"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Player / now playing",
+    "Station or schedule view"
+  ],
+  "caseStudy": {
+    "overview": "An online radio application.",
+    "problem": null,
+    "contribution": [
+      "Implemented the UI with the designer.",
+      "Built the radio streaming feature.",
+      "Set up the radio streaming service for the client.",
+      "Delivered bug fixes and further features."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

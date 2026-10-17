@@ -1,0 +1,46 @@
+{
+  "order": 90,
+  "title": "Saleslify",
+  "tagline": "Inventory management platform",
+  "kind": "client",
+  "platform": "Flutter",
+  "status": "Client project",
+  "roles": [
+    "mobile",
+    "design"
+  ],
+  "summary": "Flutter front end for Saleslify, an inventory management platform — designer wireframes turned into responsive, interactive components.",
+  "myRole": "Flutter developer",
+  "stack": [
+    "Flutter",
+    "Dart",
+    "State management",
+    "Custom widgets"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Inventory dashboard",
+    "Product / stock list",
+    "Add or edit item",
+    "Tablet or responsive layout"
+  ],
+  "caseStudy": {
+    "overview": "Saleslify is an inventory management platform with a Flutter front end.",
+    "problem": null,
+    "contribution": [
+      "Designed user interfaces in Flutter.",
+      "Turned designers' wireframes and mockups into interactive UI components.",
+      "Applied responsive design so it works across device sizes.",
+      "Implemented state management for data handling and UI updates.",
+      "Added custom widgets, animations and gestures."
+    ],
+    "team": "Worked closely with the project's designers.",
+    "constraints": null,
+    "approach": "Designer wireframes and mockups were translated into interactive Flutter components, with responsive layouts so the screens work across device sizes.",
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-route-html.mjs",
+    "build": "node scripts/build-cms-config.mjs && node scripts/check-cms-config.mjs && vite build && node scripts/generate-route-html.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "cms:config": "node scripts/build-cms-config.mjs",
+    "check:cms": "node scripts/build-cms-config.mjs && node scripts/check-cms-config.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

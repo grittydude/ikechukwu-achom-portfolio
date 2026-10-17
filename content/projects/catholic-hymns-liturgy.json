@@ -1,0 +1,44 @@
+{
+  "order": 110,
+  "title": "Catholic Hymns & Liturgy",
+  "tagline": "Worship companion app",
+  "kind": "client",
+  "platform": "Android",
+  "status": "Client project",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "A hymn and liturgy app for Nigerian Christians. I implemented its redesign and rebuilt it in Kotlin, replacing the original Java codebase.",
+  "myRole": "Android developer",
+  "stack": [
+    "Kotlin",
+    "Java → Kotlin migration"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Hymn list",
+    "Hymn reader",
+    "Liturgy view"
+  ],
+  "caseStudy": {
+    "overview": "An app supporting personal spiritual growth and participation in communal worship.",
+    "problem": null,
+    "contribution": [
+      "Implemented a redesign of the application.",
+      "Built the new version in Kotlin, replacing the previous Java code."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": [
+      {
+        "title": "Rewrite in Kotlin alongside the redesign",
+        "body": "The redesign was delivered as a new Kotlin version rather than layered onto the existing Java codebase."
+      }
+    ],
+    "outcomes": null,
+    "lessons": null
+  }
+}

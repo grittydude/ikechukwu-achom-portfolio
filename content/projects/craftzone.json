@@ -1,0 +1,46 @@
+{
+  "order": 40,
+  "title": "Craftzone",
+  "tagline": "Local services marketplace",
+  "kind": "client",
+  "platform": "Android",
+  "status": "Shipped to Google Play",
+  "roles": [
+    "mobile",
+    "design",
+    "leadership"
+  ],
+  "featured": true,
+  "summary": "An app for finding services and service providers nearby. I led the team, revamped the interface and shipped a ticketing system with in-app chat.",
+  "myRole": "Team lead & Android developer",
+  "stack": [
+    "Android",
+    "Kotlin",
+    "TDD where applicable"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Service discovery / home",
+    "Provider profile",
+    "Ticket with chat",
+    "Before vs after of the UI revamp"
+  ],
+  "caseStudy": {
+    "overview": "Craftzone lets people find services and service providers around them quickly.",
+    "problem": null,
+    "contribution": [
+      "Led the team developing the product.",
+      "Revamped the previous interface to improve the user experience.",
+      "Built new features, including a ticketing system with chat.",
+      "Published updates to the Google Play Store."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": "Clean coding standards, modular code and object-oriented design, with test-driven development where it made sense.",
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

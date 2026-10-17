@@ -1,0 +1,73 @@
+{
+  "order": 10,
+  "title": "Dedline",
+  "tagline": "Subscription & renewal tracker",
+  "kind": "personal",
+  "platform": "Android (Flutter)",
+  "status": "In development",
+  "roles": [
+    "mobile",
+    "design",
+    "leadership"
+  ],
+  "featured": true,
+  "summary": "A Flutter app that keeps subscriptions, renewals and other recurring commitments from catching you off guard — built on a Supabase backend with an AI step that pulls subscription details out of documents.",
+  "myRole": "Product owner & Flutter engineer",
+  "stack": [
+    "Flutter",
+    "Riverpod",
+    "go_router",
+    "Freezed",
+    "Supabase",
+    "Edge Functions",
+    "Local notifications"
+  ],
+  "links": {
+    "demo": "https://appetize.io/app/b_rx6upyfwsb6v7fyrwzulwjfb4i"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Subscription list / home",
+    "Add subscription",
+    "AI extraction from a document",
+    "Reminder notification",
+    "Calendar view"
+  ],
+  "caseStudy": {
+    "overview": "Dedline began as a local-only deadline tracker and is being rebuilt into a subscription tracker: what you pay for, when it renews, and a reminder early enough to cancel or budget for it.",
+    "problem": "Renewal dates rarely repeat often enough to stay in your head. They sit in an email from eight months ago, and the first reminder is the charge itself. General to-do apps treat them like any other task, with no amount, billing cycle or provider attached.",
+    "contribution": [
+      "Set the V1 scope: Android first, single-user accounts, and a currency-agnostic schema with NGN as the default.",
+      "Structured the app by feature (auth, subscriptions, categories, onboarding, settings, AI extraction), each split into data, domain and presentation layers.",
+      "Moved persistence from an on-device Drift/SQLite database to Supabase in stages, keeping the app working at each step."
+    ],
+    "team": null,
+    "constraints": [
+      "Android-only first release, to keep the scope small enough to ship.",
+      "New personal Google Play accounts must run a 14-day closed test with at least 12 testers before production — a release-date constraint unrelated to engineering speed.",
+      "API keys for the AI step can't ship inside the app."
+    ],
+    "approach": "Evolve the existing codebase rather than start over. Its routing, theming, calendar view and notification scheduling were sound, so the work went into the data model and backend: subscription entities, Supabase auth, Postgres tables behind row-level security, file storage, and a server-side extraction function.",
+    "decisions": [
+      {
+        "title": "Rebuild on the existing app, not from scratch",
+        "body": "The existing architecture already handled navigation, theming and reminders well. Keeping it meant the effort went into what was missing — a real backend and a subscription data model."
+      },
+      {
+        "title": "Retire the local database completely",
+        "body": "Once subscriptions lived in Supabase, the Drift/SQLite layer was removed rather than kept in sync. The only local state left is reminder notification IDs, in shared_preferences."
+      },
+      {
+        "title": "Run AI extraction in an Edge Function",
+        "body": "Pulling subscription details out of an uploaded document happens in a Supabase Edge Function, so model credentials stay server-side and the client only calls an RPC."
+      },
+      {
+        "title": "Security in the database, not just the client",
+        "body": "Row-level security policies are part of the schema migrations, so each user can only reach their own rows no matter which client makes the request."
+      }
+    ],
+    "outcomes": null,
+    "lessons": null
+  }
+}

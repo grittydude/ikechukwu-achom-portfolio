@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { DEFAULT_META, metaFor } from "../../data/seo";
+import { DEFAULT_META, metaFor } from "../../data/routes";
 import { absoluteUrl, publicUrl, SITE_ORIGIN } from "../../data/site";
 
 function setMeta(attr, key, content) {

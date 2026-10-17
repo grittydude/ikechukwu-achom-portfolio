@@ -1,0 +1,35 @@
+{
+  "order": 160,
+  "title": "Legogi",
+  "tagline": "Personal finance & budgeting",
+  "kind": "personal",
+  "platform": "Mobile",
+  "status": "In development",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "A personal finance app for tracking expenses, spending habits and budgets.",
+  "myRole": null,
+  "stack": [
+    "Flutter"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Spending overview",
+    "Add expense",
+    "Budget view"
+  ],
+  "caseStudy": {
+    "overview": "A personal finance and budgeting app that helps users track expenses and understand their spending habits.",
+    "problem": null,
+    "contribution": null,
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

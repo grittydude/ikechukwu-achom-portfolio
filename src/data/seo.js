@@ -1,9 +1,6 @@
-// Per-route metadata. Used at runtime by components/layout/Seo.jsx and at
-// build time by scripts/generate-route-html.mjs (which writes a static
-// index.html per route so link previews work without JavaScript).
-
-import { ROLES } from "./roles.js";
-import { PROJECTS, hasCaseStudy } from "./projects.js";
+// Per-route metadata. Pure (no imports of content), so the app
+// (src/data/routes.js) and the Node build script
+// (scripts/generate-route-html.mjs) build the exact same list.
 
 export const DEFAULT_META = {
   title: "Ikechukwu Achom — Mobile Engineer & Product Builder",
@@ -48,17 +45,18 @@ const STATIC_ROUTES = [
   },
 ];
 
-export const ROUTE_META = [
-  ...STATIC_ROUTES,
-  ...ROLES.map((r) => ({ path: r.path, ...r.meta, priority: "0.9" })),
-  ...PROJECTS.filter(hasCaseStudy).map((p) => ({
-    path: `/projects/${p.slug}`,
-    title: `${p.title} — ${p.tagline} | Ikechukwu Achom`,
-    description: p.summary,
-    priority: "0.6",
-  })),
-];
-
-export function metaFor(path) {
-  return ROUTE_META.find((m) => m.path === path) ?? null;
+/** @param roles ROLES  @param projects normalized PROJECTS */
+export function buildRouteMeta(roles, projects) {
+  return [
+    ...STATIC_ROUTES,
+    ...roles.map((r) => ({ path: r.path, ...r.meta, priority: "0.9" })),
+    ...projects
+      .filter((p) => p.caseStudy)
+      .map((p) => ({
+        path: `/projects/${p.slug}`,
+        title: `${p.title} — ${p.tagline} | Ikechukwu Achom`,
+        description: p.summary,
+        priority: "0.6",
+      })),
+  ];
 }

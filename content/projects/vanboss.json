@@ -1,0 +1,41 @@
+{
+  "order": 80,
+  "title": "VanBoss",
+  "tagline": "Logistics app",
+  "kind": "client",
+  "platform": "Flutter",
+  "status": "Client project",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "A Flutter logistics app. I built screens and logic from the designs and the map integration that connects customers with drivers.",
+  "myRole": "Flutter developer",
+  "stack": [
+    "Flutter",
+    "Dart",
+    "Maps"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Customer booking",
+    "Live map: customer and driver",
+    "Driver view"
+  ],
+  "caseStudy": {
+    "overview": "A Flutter logistics application connecting customers and drivers.",
+    "problem": null,
+    "contribution": [
+      "Implemented the app's designs and logic.",
+      "Built map integration between customer and driver.",
+      "Worked with the product designer and product manager to keep the project moving."
+    ],
+    "team": "Product designer, product manager and developers.",
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

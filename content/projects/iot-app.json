@@ -1,0 +1,41 @@
+{
+  "order": 190,
+  "title": "IoTApp",
+  "tagline": "Switch control over MQTT",
+  "kind": "personal",
+  "platform": "Android",
+  "status": "Open source",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "An Android app that turns a physical switch on and off over MQTT.",
+  "myRole": "Developer",
+  "stack": [
+    "Java",
+    "MQTT",
+    "Android"
+  ],
+  "links": {
+    "code": "https://github.com/Ikey22/IoTApp"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Switch control screen",
+    "The hardware it controls"
+  ],
+  "caseStudy": {
+    "overview": "An IoT companion app that switches a device on and off.",
+    "problem": null,
+    "contribution": [
+      "Designed and implemented the logic for sending messages over the protocol.",
+      "Integrated MQTT on Android."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": "MQTT's lightweight publish/subscribe model suits small devices: the app publishes on/off messages that the switch subscribes to.",
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

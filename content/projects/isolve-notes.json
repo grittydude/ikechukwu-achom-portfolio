@@ -1,0 +1,39 @@
+{
+  "order": 200,
+  "title": "iSolve Notes",
+  "tagline": "Notes & to-dos",
+  "kind": "personal",
+  "platform": "Android",
+  "status": "Open source",
+  "roles": [
+    "mobile"
+  ],
+  "summary": "A notebook app for creating and saving notes and to-dos.",
+  "myRole": "Developer",
+  "stack": [
+    "Android"
+  ],
+  "links": {
+    "code": "https://github.com/Ikey22/ISolveNotes"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Notes list",
+    "Note editor",
+    "To-do view"
+  ],
+  "caseStudy": {
+    "overview": "An Android notebook app for creating and saving notes and to-dos.",
+    "problem": null,
+    "contribution": [
+      "Built the app."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "order": 50,
+  "title": "King of Glory Healthcare",
+  "tagline": "Mental-health clinic website",
+  "kind": "client",
+  "platform": "Web",
+  "status": "Delivered",
+  "roles": [
+    "web"
+  ],
+  "featured": true,
+  "summary": "The public website for a mental-health clinic in Clinton, Maryland — built so patients can understand the practice and its services before they call.",
+  "myRole": "Web developer",
+  "stack": [
+    "React",
+    "Vite",
+    "React Router",
+    "Framer Motion"
+  ],
+  "links": {
+    "code": "https://github.com/grittydude/king-of-glory"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Homepage",
+    "Services page",
+    "Contact / booking page",
+    "Mobile view"
+  ],
+  "caseStudy": {
+    "overview": "A multi-page React site introducing King of Glory Healthcare's services to prospective patients.",
+    "problem": null,
+    "contribution": [
+      "Built the site as a multi-page React application with client-side routing and animated transitions."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

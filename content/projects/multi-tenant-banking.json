@@ -1,0 +1,42 @@
+{
+  "order": 30,
+  "title": "Multi-tenant Banking & UINSta",
+  "tagline": "Enterprise mobile banking",
+  "kind": "client",
+  "platform": "Android & React Native",
+  "status": "Delivered (2025)",
+  "roles": [
+    "mobile"
+  ],
+  "featured": true,
+  "confidential": true,
+  "summary": "At Innovanitics I built onboarding features for UBA's UINSta app and helped design a multi-tenant banking platform that serves several financial institutions from one codebase.",
+  "myRole": "Mobile Developer (Android & React Native), Innovanitics",
+  "stack": [
+    "Android",
+    "React Native",
+    "Multi-tenant architecture"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [],
+  "caseStudy": {
+    "overview": "Two strands of enterprise banking work at Innovanitics: features for an existing bank's consumer app, and a platform meant to be configured for many banks.",
+    "problem": "Banks wanted their own branded apps without each one becoming a separate codebase to build and maintain.",
+    "contribution": [
+      "Implemented account creation, onboarding and setup features in UINSta (UBA's mobile app).",
+      "Designed and implemented the tenant architecture for a banking solution serving multiple financial institutions.",
+      "Built bank-specific proof-of-concept apps to show prospective clients the platform and speed up adoption.",
+      "Found and fixed deployment bugs to keep releases stable."
+    ],
+    "team": "Cross-functional client teams at Innovanitics.",
+    "constraints": [
+      "Client confidentiality — no screenshots, code or client data can be shared."
+    ],
+    "approach": "A single platform built to serve multiple financial institutions through a tenant architecture, with bank-specific proof-of-concept apps used to demonstrate it to prospective clients.",
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

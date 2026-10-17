@@ -13,7 +13,7 @@ const DEV = import.meta.env.DEV;
 
 /** Dev-only marker for an empty section; production omits the section entirely. */
 function Missing({ label }) {
-  return <p className="dev-missing">Missing: {label} — add it in src/data/projects.js (see CONTENT-TODO.md)</p>;
+  return <p className="dev-missing">Missing: {label} — add it in /admin or content/projects/*.json (see CONTENT-TODO.md)</p>;
 }
 
 function List({ items }) {

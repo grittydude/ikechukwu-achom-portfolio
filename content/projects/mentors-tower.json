@@ -1,0 +1,44 @@
+{
+  "order": 70,
+  "title": "Mentors Tower",
+  "tagline": "Find a mentor in your field",
+  "kind": "personal",
+  "platform": "Android",
+  "status": "Previously on Google Play",
+  "roles": [
+    "mobile",
+    "leadership"
+  ],
+  "summary": "A platform for finding mentors in a specific area. I led the team, published the app on Google Play and supported it after launch.",
+  "myRole": "Team lead & developer",
+  "stack": [
+    "Android",
+    "Google Play Console"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Mentor discovery",
+    "Mentor profile",
+    "Mentorship request"
+  ],
+  "caseStudy": {
+    "overview": "Users find mentors in a specific area and get mentorship from experienced practitioners.",
+    "problem": null,
+    "contribution": [
+      "Led the team building and deploying the product.",
+      "Built and published the app on the Google Play Store.",
+      "Monitored Play Console analytics after launch.",
+      "Shipped bug fixes and features based on user and client feedback."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": "Ship, then iterate: after launch the team watched Play Console analytics and user feedback, and fed fixes and new features back into regular updates.",
+    "decisions": null,
+    "outcomes": [
+      "Published on Google Play."
+    ],
+    "lessons": null
+  }
+}

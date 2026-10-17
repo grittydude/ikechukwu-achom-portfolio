@@ -1,0 +1,56 @@
+{
+  "order": 60,
+  "title": "Blood Donation App",
+  "tagline": "Connecting donors and recipients",
+  "kind": "personal",
+  "platform": "Android → Flutter",
+  "status": "Demo available",
+  "roles": [
+    "mobile",
+    "design"
+  ],
+  "summary": "Find blood donors by blood type and request a donation. I designed it in Figma, built it natively in Kotlin with Firebase, then rebuilt it in Flutter.",
+  "myRole": "Designer & developer",
+  "stack": [
+    "Figma",
+    "Kotlin",
+    "Firebase",
+    "Flutter",
+    "Riverpod",
+    "Hive"
+  ],
+  "links": {
+    "demo": "https://appetize.io/app/b_nxuludyeiq5wxym7gkoqaoc33y",
+    "code": "https://github.com/grittydude/blood-donation-app"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Figma design",
+    "Donor search by blood type",
+    "Donation request",
+    "Donor profile"
+  ],
+  "caseStudy": {
+    "overview": "A mobile app where users find donors of a specific blood type and send donation requests.",
+    "problem": "When a patient needs a specific blood type, finding a willing donor quickly usually means a lot of phone calls.",
+    "contribution": [
+      "Designed the app in Figma.",
+      "Built the first version in Kotlin with Firebase in Android Studio.",
+      "Rebuilt it in Flutter with Riverpod for state, go_router for navigation and Hive for local storage."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": [
+      {
+        "title": "Rebuild in Flutter",
+        "body": "The original native Kotlin app was rebuilt in Flutter, moving the product onto the cross-platform stack used across later projects."
+      }
+    ],
+    "outcomes": [
+      "Interactive demo available on Appetize."
+    ],
+    "lessons": null
+  }
+}

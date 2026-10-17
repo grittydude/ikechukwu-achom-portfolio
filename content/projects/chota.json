@@ -1,0 +1,43 @@
+{
+  "order": 150,
+  "title": "Chota",
+  "tagline": "Local business directory",
+  "kind": "personal",
+  "platform": "Web & mobile",
+  "status": "In development",
+  "roles": [
+    "mobile",
+    "leadership"
+  ],
+  "summary": "A location-based directory to help people find shops and businesses in their city, launching first in Eket.",
+  "myRole": null,
+  "stack": [
+    "Flutter",
+    "Firebase",
+    "Google Maps API"
+  ],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Map / nearby businesses",
+    "Business listing",
+    "Search results"
+  ],
+  "caseStudy": {
+    "overview": "A directory that improves local businesses' visibility, with Eket as the first market.",
+    "problem": "Local shops and businesses have little visibility online, which makes them hard to discover.",
+    "contribution": null,
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": [
+      {
+        "title": "Launch in one city first",
+        "body": "Eket is the initial launch market and case study, so listings and recommendations can be built up properly in one place before expanding."
+      }
+    ],
+    "outcomes": null,
+    "lessons": null
+  }
+}

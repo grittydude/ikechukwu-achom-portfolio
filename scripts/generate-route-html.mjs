@@ -9,10 +9,11 @@
 //
 // It also writes sitemap.xml and robots.txt.
 
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ROUTE_META, DEFAULT_META } from "../src/data/seo.js";
+import { buildRouteMeta, DEFAULT_META } from "../src/data/seo.js";
+import { normalizeProject, sortProjects } from "../src/data/normalize.js";
 import { absoluteUrl, publicUrl, SITE_ORIGIN } from "../src/data/site.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -45,6 +46,15 @@ function renderHead(shell, meta) {
   html = setTag(html, /<meta name="twitter:image" content="[^"]*"/, `<meta name="twitter:image" content="${image}"`, "twitter:image");
   return html;
 }
+
+// Same content the app reads (content/*.json), loaded without Vite.
+const readJson = async (p) => JSON.parse(await readFile(join(root, p), "utf8"));
+const { roles } = await readJson("content/roles.json");
+const projectFiles = (await readdir(join(root, "content/projects"))).filter((f) => f.endsWith(".json"));
+const projects = sortProjects(
+  await Promise.all(projectFiles.map(async (f) => normalizeProject(f.replace(/.json$/, ""), await readJson(`content/projects/${f}`))))
+);
+const ROUTE_META = buildRouteMeta(roles, projects);
 
 const shell = await readFile(join(dist, "index.html"), "utf8");
 let count = 0;

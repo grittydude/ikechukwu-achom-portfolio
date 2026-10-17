@@ -1,0 +1,44 @@
+{
+  "order": 130,
+  "title": "House on the Rock, Eket",
+  "tagline": "Church community website",
+  "kind": "client",
+  "platform": "Web",
+  "status": "Live",
+  "roles": [
+    "web"
+  ],
+  "summary": "A church website that welcomes visitors and shares the congregation's mission, service times and information.",
+  "myRole": "Web developer",
+  "stack": [
+    "Web"
+  ],
+  "links": {
+    "live": "https://hotreket.com/"
+  },
+  "screenshot": {
+    "src": "projects/house-on-the-rock-eket/home.jpg",
+    "alt": "House on the Rock, Eket homepage with navigation and a service-times banner"
+  },
+  "screens": [],
+  "screenSlots": [
+    "Sermons page",
+    "Events page",
+    "Mobile view"
+  ],
+  "caseStudy": {
+    "overview": "A community website for House on the Rock, Eket.",
+    "problem": null,
+    "contribution": [
+      "Built and shipped the site."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": [
+      "Live at hotreket.com."
+    ],
+    "lessons": null
+  }
+}

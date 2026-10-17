@@ -11,7 +11,7 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 - **References**: the public CV (`public/cv/`) now says "References available on request". Referee names and numbers were removed from the page, the accessibility tags and the bookmarks. Your original file in Downloads is unchanged.
 - **Availability**: open to mobile and web development, product design, technical leadership and product management roles.
 - **GitHub**: `github.com/grittydude` is the main profile everywhere.
-- **Projects (2026-10-17)**: KodeCamp updated (7 bootcamps, 10,000+ participants, kode.camp); MSF renamed Saleslify; Go removed; RMS listed as a client project; iFusion listed as a confidential company project; project "Source code" links hidden (turn back on with `SHOW_SOURCE_LINKS` in `src/data/site.js`).
+- **Projects (2026-10-17)**: KodeCamp updated (7 bootcamps, 10,000+ participants, kode.camp); MSF renamed Saleslify; Go removed; RMS listed as a client project; iFusion listed as a confidential company project; project "Source code" links hidden (turn back on in /admin → Site content → Site settings).
 - **Portrait**: added (`public/images/ikechukwu-achom.webp`) and used in the share image.
 
 ## Still worth a look
@@ -25,7 +25,7 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 ## Assets needed
 
 - **Higher-resolution portrait** (optional): the supplied photo is 329×405px. A ~900px-tall cut-out would look sharper on retina screens. Replace `public/images/ikechukwu-achom.webp`.
-- **Project screenshots.** Only House on the Rock, Eket has a real screenshot (captured from the live site). Everything else shows an abstract device frame. Add real screens to `public/projects/<slug>/` and set `screenshot: { src, alt }` on the project in `src/data/projects.js`. Priority: Dedline, Blood Donation, Craftzone, King of Glory, Bezimeni.
+- **Project screenshots.** Only House on the Rock, Eket has a real screenshot (captured from the live site). Everything else shows an abstract device frame. Add real screens to `public/projects/<slug>/` via /admin (Projects → Cover image / Screens gallery). Priority: Dedline, Blood Donation, Craftzone, King of Glory, Bezimeni.
 - **Role-specific CVs (optional).** Add a file to `public/cv/` and map it in `CV_FILES` in `src/data/site.js`. Each role page picks it up automatically.
 
 ## Broken or changed links found on 2026-10-17
@@ -38,7 +38,7 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 
 ## Case-study gaps (by project)
 
-Fill these in `src/data/projects.js`. Use real numbers only.
+Fill these in /admin (Projects → Case study) or in `content/projects/<slug>.json`. Use real numbers only.
 
 - **Dedline**: outcomes (testers, release status), lessons learned. Confirm the "Product owner & Flutter engineer" role and whether anyone else contributed.
 - **KodeCamp**: the problem it was set up to solve, constraints, approach (cohort format, curriculum, tools), key decisions, lessons. Team size if you want it shown.
@@ -58,7 +58,7 @@ Fill these in `src/data/projects.js`. Use real numbers only.
 
 ## Screenshots for case studies
 
-Every project now has a case-study page with a **Screens** gallery. Add images to `public/projects/<slug>/` and list them in `src/data/projects.js`:
+Every project now has a case-study page with a **Screens** gallery. The easiest way is /admin → Projects → pick a project → **Cover image** and **Screens gallery** (uploads go to `public/projects/`). By hand, add files to `public/projects/<slug>/` and list them in `content/projects/<slug>.json`:
 
 ```js
 screenshot: { src: "projects/dedline/cover.webp", alt: "Dedline subscription list" },   // card + page cover

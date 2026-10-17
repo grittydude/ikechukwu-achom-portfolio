@@ -1,0 +1,30 @@
+{
+  "order": 180,
+  "title": "iFusion",
+  "tagline": "Enterprise document & asset management",
+  "kind": "employer",
+  "platform": null,
+  "status": "Company product",
+  "roles": [],
+  "confidential": true,
+  "summary": "An enterprise document and asset management product owned by my employer. Details are confidential.",
+  "myRole": null,
+  "stack": [],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [],
+  "caseStudy": {
+    "overview": "iFusion is a company-owned enterprise product for managing documents and assets. Because it's proprietary, this page describes it only at a high level.",
+    "problem": null,
+    "contribution": null,
+    "team": null,
+    "constraints": [
+      "Company-owned and confidential — no screenshots, code or client details can be shared."
+    ],
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

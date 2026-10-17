@@ -1,0 +1,55 @@
+{
+  "order": 20,
+  "title": "KodeCamp",
+  "tagline": "Online tech training program",
+  "kind": "program",
+  "platform": "Online bootcamps & community",
+  "status": "Ongoing",
+  "roles": [
+    "leadership"
+  ],
+  "featured": true,
+  "highlight": {
+    "value": "10,000+",
+    "label": "participants · 7 bootcamps"
+  },
+  "summary": "KodeHauz's online tech training program: seven bootcamps and more than 10,000 participants so far. As Program Manager I lead the team that runs the bootcamps, the platform and the learner community.",
+  "myRole": "Program Manager (2021 — Present); previously Training Lead and Trainer",
+  "stack": [
+    "Program management",
+    "Curriculum",
+    "Community",
+    "Mentoring"
+  ],
+  "links": {
+    "live": "https://kode.camp"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "kode.camp homepage",
+    "A bootcamp curriculum or track page",
+    "Learner community",
+    "Cohort or graduation moment"
+  ],
+  "caseStudy": {
+    "overview": "KodeCamp is the training arm of KodeHauz Solutions Planet. It runs cohort-based online bootcamps and the learner community around them, and has delivered seven bootcamps with more than 10,000 participants.",
+    "problem": null,
+    "contribution": [
+      "As Program Manager, lead the team that runs the bootcamps, the training platform and the learner community.",
+      "Built and manage an online community of 4,000+ members where learners collaborate between and after cohorts.",
+      "As Training Lead (2021 — 2022), introduced training methods built to scale, growing both enrolment and training revenue.",
+      "As Trainer (2020 — 2023), taught mobile development, UX design and programming foundations with Python, and mentored trainees through their final projects."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": [
+      "7 bootcamps delivered",
+      "10,000+ participants",
+      "4,000+ member learning community"
+    ],
+    "lessons": null
+  }
+}

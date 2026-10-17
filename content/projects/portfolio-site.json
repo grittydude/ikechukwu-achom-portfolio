@@ -1,0 +1,55 @@
+{
+  "order": 140,
+  "title": "This Portfolio",
+  "tagline": "Role-based portfolio site",
+  "kind": "personal",
+  "platform": "Web",
+  "status": "Live",
+  "roles": [
+    "web",
+    "design"
+  ],
+  "summary": "This site: one data layer driving a homepage, four role-specific portfolios and project case studies, with static meta tags generated for each route at build time.",
+  "myRole": "Designer & developer",
+  "stack": [
+    "React 19",
+    "Vite",
+    "React Router",
+    "CSS Modules"
+  ],
+  "links": {
+    "code": "https://github.com/grittydude/ikechukwu-achom-portfolio"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [],
+  "caseStudy": {
+    "overview": "A recruiter-focused portfolio where each career path has its own URL that makes sense on its own.",
+    "problem": "Mobile engineering, product design and program leadership read as three unrelated CVs when they're listed side by side. Recruiters need the one view that matches their role.",
+    "contribution": [
+      "Content model in plain JS modules: experience, projects, roles and credentials.",
+      "One role-page template driven by data, so each path has a focused page without duplicate components.",
+      "A post-build script that writes per-route HTML with its own title, description, canonical URL and Open Graph tags, plus sitemap.xml and robots.txt."
+    ],
+    "team": null,
+    "constraints": [
+      "Static hosting on GitHub Pages — no server rendering.",
+      "No new dependencies beyond the existing React/Vite stack."
+    ],
+    "approach": "Content first: every page reads from the same data files, so adding a project or a role-specific CV is a data change, not a layout change.",
+    "decisions": [
+      {
+        "title": "Static HTML per route instead of a prerender framework",
+        "body": "Link previews on LinkedIn and Slack don't run JavaScript. Writing a small HTML file per route with the right meta tags fixes that without adding SSR tooling."
+      },
+      {
+        "title": "Hide gaps instead of filling them",
+        "body": "Case-study fields without real content are omitted in production and flagged in development, so nothing on the site is invented to look complete."
+      }
+    ],
+    "outcomes": [
+      "Live on GitHub Pages, with a shareable URL per career path."
+    ],
+    "lessons": null
+  }
+}

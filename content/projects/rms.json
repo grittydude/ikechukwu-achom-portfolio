@@ -1,0 +1,31 @@
+{
+  "order": 170,
+  "title": "RMS",
+  "tagline": "Request management system",
+  "kind": "client",
+  "platform": null,
+  "status": "Client project",
+  "roles": [],
+  "summary": "A request management system built for a client.",
+  "myRole": null,
+  "stack": [],
+  "links": {},
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Request list / dashboard",
+    "Request detail and status",
+    "Approval flow"
+  ],
+  "caseStudy": {
+    "overview": "A request management system delivered for a client.",
+    "problem": null,
+    "contribution": null,
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": null,
+    "lessons": null
+  }
+}

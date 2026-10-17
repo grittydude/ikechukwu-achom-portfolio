@@ -1,0 +1,43 @@
+{
+  "order": 120,
+  "title": "Bezimeni Resources",
+  "tagline": "Graduate training website",
+  "kind": "client",
+  "platform": "Web",
+  "status": "Live",
+  "roles": [
+    "web"
+  ],
+  "summary": "Website for an organisation that gives science and engineering graduates practical, industry-focused training.",
+  "myRole": "Web developer",
+  "stack": [
+    "React 19",
+    "Vite"
+  ],
+  "links": {
+    "live": "https://bezimeniresources.com/",
+    "code": "https://github.com/grittydude/benzemi-resources"
+  },
+  "screenshot": null,
+  "screens": [],
+  "screenSlots": [
+    "Homepage",
+    "Programs page",
+    "Mobile view"
+  ],
+  "caseStudy": {
+    "overview": "Program and training information aimed at graduates moving into industry.",
+    "problem": null,
+    "contribution": [
+      "Built and shipped the site with React and Vite."
+    ],
+    "team": null,
+    "constraints": null,
+    "approach": null,
+    "decisions": null,
+    "outcomes": [
+      "Live at bezimeniresources.com."
+    ],
+    "lessons": null
+  }
+}

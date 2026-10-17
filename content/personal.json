@@ -1,0 +1,45 @@
+{
+  "name": "Ikechukwu Achom",
+  "firstName": "Ikechukwu",
+  "lastName": "Achom",
+  "initials": "IA",
+  "identity": "Product Builder",
+  "headline": "Mobile engineer and product builder",
+  "intro": "I build mobile products end to end — from the Figma file to the Play Store listing — and lead the teams and training programs that ship them. Flutter, Kotlin and React Native across fintech, logistics and enterprise work.",
+  "currentRole": "Senior Technical Lead & Operations Manager",
+  "alsoRole": "Lead Mobile Developer",
+  "currentCompany": "KodeHauz Solutions Planet",
+  "location": "Nigeria",
+  "photo": "images/ikechukwu-achom.webp",
+  "email": "ikechukwu.a.achom@gmail.com",
+  "phone": "+234 810 950 7906",
+  "whatsapp": "+234 810 950 7906",
+  "whatsappHref": "https://wa.me/2348109507906",
+  "linkedin": "https://www.linkedin.com/in/ikechukwuachom/",
+  "linkedinHandle": "in/ikechukwuachom",
+  "github": "https://github.com/grittydude",
+  "githubHandle": "github.com/grittydude",
+  "githubLegacy": "https://github.com/Ikey22",
+  "stats": [
+    {
+      "num": "10,000+",
+      "label": "KodeCamp participants",
+      "source": "owner"
+    },
+    {
+      "num": "4,000+",
+      "label": "Tech community members",
+      "source": "cv"
+    },
+    {
+      "num": "7",
+      "label": "Bootcamps delivered",
+      "source": "owner"
+    },
+    {
+      "num": "2019",
+      "label": "Leading mobile at KodeHauz since",
+      "source": "cv"
+    }
+  ]
+}
