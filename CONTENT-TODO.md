@@ -10,13 +10,15 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 - **Title**: Senior Technical Lead & Operations Manager, and Lead Mobile Developer, at KodeHauz.
 - **References**: the public CV (`public/cv/`) now says "References available on request". Referee names and numbers were removed from the page, the accessibility tags and the bookmarks. Your original file in Downloads is unchanged.
 - **Availability**: open to mobile and web development, product design, technical leadership and product management roles.
+- **GitHub**: `github.com/grittydude` is the main profile everywhere.
+- **Projects (2026-10-17)**: KodeCamp updated (7 bootcamps, 10,000+ participants, kode.camp); MSF renamed Saleslify; Go removed; RMS listed as a client project; iFusion listed as a confidential company project; project "Source code" links hidden (turn back on with `SHOW_SOURCE_LINKS` in `src/data/site.js`).
 - **Portrait**: added (`public/images/ikechukwu-achom.webp`) and used in the share image.
 
 ## Still worth a look
 
 | # | Item | Where |
 |---|------|-------|
-| 1 | **Primary GitHub**: the site links `github.com/Ikey22`; newer repos are on `github.com/grittydude`. Pin your best repos on whichever you keep. | `src/data/personal.js` |
+| 1 | **CV numbers are out of date**: the site now says KodeCamp has run 7 bootcamps with 10,000+ participants; the CV still says 4 bootcamps and 700+ graduates. | your CV source file |
 | 2 | **Working principles** on /about are opinion, not record. Make sure they sound like you. | `src/pages/About.jsx` |
 | 3 | **CV title line** reads "Lead Mobile Developer, Senior Tech Lead". Consider adding "Operations Manager" there too. | your CV source file |
 
@@ -53,3 +55,14 @@ Fill these in `src/data/projects.js`. Use real numbers only.
 - `src/data/testimonials.js`: six named testimonials (for example "CTO, FinanceFlow Nigeria") that couldn't be verified. Add only real quotes, with permission.
 - Previous experience entries that conflicted with the CV ("Senior Flutter Developer 2021–Present", Node.js/FastAPI tags, "Firebase Expert", "100% Remote Ready" stats).
 - The 1.4-second forced loading screen (it delayed every first visit).
+
+## Screenshots for case studies
+
+Every project now has a case-study page with a **Screens** gallery. Add images to `public/projects/<slug>/` and list them in `src/data/projects.js`:
+
+```js
+screenshot: { src: "projects/dedline/cover.webp", alt: "Dedline subscription list" },   // card + page cover
+screens: [{ src: "projects/dedline/add.webp", alt: "Adding a subscription", caption: "Add subscription" }],
+```
+
+In `npm run dev`, each case study shows dashed placeholder slots naming the screens worth capturing (`screenSlots` in `projects.js`). Production hides the gallery until real screens exist. Confidential projects (banking, iFusion) never show a gallery. WebP, about 1200px on the long side, keeps pages fast.

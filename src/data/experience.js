@@ -30,7 +30,7 @@ export const EXPERIENCE = [
     highlights: [
       "Led the mobile development team building solutions for KodeHauz and its clients.",
       "Turned client requirements into working software, then tested and refined it before rollout.",
-      "Client work includes Radio Basar, Craftzone, Catholic Hymns & Liturgy, MSF and VanBoss.",
+      "Client work includes Radio Basar, Craftzone, Catholic Hymns & Liturgy, Saleslify and VanBoss.",
     ],
     tags: ["Flutter", "Kotlin", "Team leadership", "Client delivery"],
   },
@@ -43,9 +43,9 @@ export const EXPERIENCE = [
     summary:
       "Runs KodeCamp, KodeHauz's online tech training program.",
     highlights: [
-      "Led the team that delivered four KodeCamp bootcamps.",
-      "Managed the training platform through which 700+ trainees graduated across those four bootcamps.",
-      "Grew and managed a 4,000+ member online learning community.",
+      "Lead the team that runs KodeCamp — seven bootcamps and 10,000+ participants so far.",
+      "Manage the training platform and the bootcamp operations behind it.",
+      "Grew and manage a 4,000+ member online learning community.",
     ],
     tags: ["Program management", "Operations", "Community"],
   },

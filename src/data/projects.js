@@ -1,20 +1,26 @@
 // Projects and case studies.
 //
 // Evidence rules for this file:
-//   • Only facts from the CV, the project's own source code, the owner's
-//     previous site copy, or a public repo/listing go in here.
+//   • Only facts from the CV, the owner's own statements, the project's
+//     source code, or a public repo/listing go in here.
 //   • A case-study field left as `null` is simply not rendered in production.
 //     In `npm run dev` it shows a dashed "missing" note so gaps stay visible.
 //     CONTENT-TODO.md lists every gap.
 //   • `contribution` is what Ikechukwu personally did; `team` describes the
 //     wider team, so individual and team work never blur together.
 //   • No asset imports here (the build script imports this file in Node).
-//     Screenshots go in public/projects/<slug>/ and are referenced by path.
+//
+// Screenshots: put files in public/projects/<slug>/ and reference them by
+// path. `screenshot` is the cover image used on cards and at the top of the
+// case study; `screens` is the gallery on the case-study page. `screenSlots`
+// lists the screens worth capturing — shown as placeholders in dev only.
+//   screenshot: { src: "projects/dedline/cover.webp", alt: "…" }
+//   screens: [{ src: "projects/dedline/home.webp", alt: "…", caption: "…" }]
 
 export const PROJECT_KINDS = {
   personal: "Personal product",
   client: "Client project",
-  employer: "Employer project",
+  employer: "Company project",
   program: "Program",
 };
 
@@ -36,6 +42,8 @@ export const PROJECTS = [
       demo: "https://appetize.io/app/b_rx6upyfwsb6v7fyrwzulwjfb4i",
     },
     screenshot: null,
+    screens: [],
+    screenSlots: ["Subscription list / home", "Add subscription", "AI extraction from a document", "Reminder notification", "Calendar view"],
     caseStudy: {
       overview:
         "Dedline began as a local-only deadline tracker and is being rebuilt into a subscription tracker: what you pay for, when it renews, and a reminder early enough to cancel or budget for it.",
@@ -85,31 +93,30 @@ export const PROJECTS = [
     status: "Ongoing",
     roles: ["leadership"],
     featured: true,
+    highlight: { value: "10,000+", label: "participants · 7 bootcamps" },
     summary:
-      "KodeHauz's online training program. As Program Manager I lead the team that runs the bootcamps, the platform and the learner community.",
+      "KodeHauz's online tech training program: seven bootcamps and more than 10,000 participants so far. As Program Manager I lead the team that runs the bootcamps, the platform and the learner community.",
     myRole: "Program Manager (2021 — Present); previously Training Lead and Trainer",
     stack: ["Program management", "Curriculum", "Community", "Mentoring"],
-    links: {},
+    links: { live: "https://kode.camp" },
     screenshot: null,
+    screens: [],
+    screenSlots: ["kode.camp homepage", "A bootcamp curriculum or track page", "Learner community", "Cohort or graduation moment"],
     caseStudy: {
       overview:
-        "KodeCamp is the training arm of KodeHauz Solutions Planet. It runs cohort-based online bootcamps and a learner community around them.",
+        "KodeCamp is the training arm of KodeHauz Solutions Planet. It runs cohort-based online bootcamps and the learner community around them, and has delivered seven bootcamps with more than 10,000 participants.",
       problem: null,
       contribution: [
-        "Led the team that delivered four bootcamps.",
-        "Managed the online platform through which 700+ trainees graduated.",
-        "Managed the online community that connects learners — now 4,000+ members.",
-        "Before managing the program: taught mobile development, UX design and Python programming foundations, and mentored trainees on their final projects.",
+        "As Program Manager, lead the team that runs the bootcamps, the training platform and the learner community.",
+        "Built and manage an online community of 4,000+ members where learners collaborate between and after cohorts.",
+        "As Training Lead (2021 — 2022), introduced training methods built to scale, growing both enrolment and training revenue.",
+        "As Trainer (2020 — 2023), taught mobile development, UX design and programming foundations with Python, and mentored trainees through their final projects.",
       ],
       team: null,
       constraints: null,
       approach: null,
       decisions: null,
-      outcomes: [
-        "4 bootcamps delivered",
-        "700+ trainees graduated",
-        "4,000+ member learning community",
-      ],
+      outcomes: ["7 bootcamps delivered", "10,000+ participants", "4,000+ member learning community"],
       lessons: null,
     },
   },
@@ -117,7 +124,7 @@ export const PROJECTS = [
     slug: "multi-tenant-banking",
     title: "Multi-tenant Banking & UINSta",
     tagline: "Enterprise mobile banking",
-    kind: "employer",
+    kind: "client",
     platform: "Android & React Native",
     status: "Delivered (2025)",
     roles: ["mobile"],
@@ -125,10 +132,12 @@ export const PROJECTS = [
     confidential: true,
     summary:
       "At Innovanitics I built onboarding features for UBA's UINSta app and helped design a multi-tenant banking platform that serves several financial institutions from one codebase.",
-    myRole: "Mobile Developer (Android & React Native)",
+    myRole: "Mobile Developer (Android & React Native), Innovanitics",
     stack: ["Android", "React Native", "Multi-tenant architecture"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: [],
     caseStudy: {
       overview:
         "Two strands of enterprise banking work at Innovanitics: features for an existing bank's consumer app, and a platform meant to be configured for many banks.",
@@ -140,9 +149,10 @@ export const PROJECTS = [
         "Built bank-specific proof-of-concept apps to show prospective clients the platform and speed up adoption.",
         "Found and fixed deployment bugs to keep releases stable.",
       ],
-      team: "Cross-functional client teams; client details are confidential.",
-      constraints: ["Client confidentiality — no screenshots or code can be shared."],
-      approach: null,
+      team: "Cross-functional client teams at Innovanitics.",
+      constraints: ["Client confidentiality — no screenshots, code or client data can be shared."],
+      approach:
+        "A single platform built to serve multiple financial institutions through a tenant architecture, with bank-specific proof-of-concept apps used to demonstrate it to prospective clients.",
       decisions: null,
       outcomes: null,
       lessons: null,
@@ -158,14 +168,15 @@ export const PROJECTS = [
     roles: ["mobile", "design", "leadership"],
     featured: true,
     summary:
-      "An app for finding services and service providers nearby. I led the team, redesigned the interface and shipped a ticketing system with in-app chat.",
+      "An app for finding services and service providers nearby. I led the team, revamped the interface and shipped a ticketing system with in-app chat.",
     myRole: "Team lead & Android developer",
     stack: ["Android", "Kotlin", "TDD where applicable"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Service discovery / home", "Provider profile", "Ticket with chat", "Before vs after of the UI revamp"],
     caseStudy: {
-      overview:
-        "Craftzone lets people find services and service providers around them quickly.",
+      overview: "Craftzone lets people find services and service providers around them quickly.",
       problem: null,
       contribution: [
         "Led the team developing the product.",
@@ -195,15 +206,16 @@ export const PROJECTS = [
       "The public website for a mental-health clinic in Clinton, Maryland — built so patients can understand the practice and its services before they call.",
     myRole: "Web developer",
     stack: ["React", "Vite", "React Router", "Framer Motion"],
-    // kingofgloryhealthcare.com stopped resolving (checked 2026-10-17) — restore
-    // `live` if the domain comes back.
+    // kingofgloryhealthcare.com stopped resolving (checked 2026-10-17) — add
+    // `live` back if the domain returns.
     links: { code: "https://github.com/grittydude/king-of-glory" },
     screenshot: null,
+    screens: [],
+    screenSlots: ["Homepage", "Services page", "Contact / booking page", "Mobile view"],
     caseStudy: {
-      overview:
-        "A multi-page React site introducing King of Glory Healthcare's services to prospective patients.",
+      overview: "A multi-page React site introducing King of Glory Healthcare's services to prospective patients.",
       problem: null,
-      contribution: ["Built and shipped the site."],
+      contribution: ["Built the site as a multi-page React application with client-side routing and animated transitions."],
       team: null,
       constraints: null,
       approach: null,
@@ -229,21 +241,27 @@ export const PROJECTS = [
       code: "https://github.com/grittydude/blood-donation-app",
     },
     screenshot: null,
+    screens: [],
+    screenSlots: ["Figma design", "Donor search by blood type", "Donation request", "Donor profile"],
     caseStudy: {
-      overview:
-        "A mobile app where users find donors of a specific blood type and send donation requests.",
+      overview: "A mobile app where users find donors of a specific blood type and send donation requests.",
       problem:
         "When a patient needs a specific blood type, finding a willing donor quickly usually means a lot of phone calls.",
       contribution: [
         "Designed the app in Figma.",
         "Built the first version in Kotlin with Firebase in Android Studio.",
-        "Rebuilt it in Flutter with Riverpod, go_router and Hive for local storage.",
+        "Rebuilt it in Flutter with Riverpod for state, go_router for navigation and Hive for local storage.",
       ],
       team: null,
       constraints: null,
       approach: null,
-      decisions: null,
-      outcomes: null,
+      decisions: [
+        {
+          title: "Rebuild in Flutter",
+          body: "The original native Kotlin app was rebuilt in Flutter, moving the product onto the cross-platform stack used across later projects.",
+        },
+      ],
+      outcomes: ["Interactive demo available on Appetize."],
       lessons: null,
     },
   },
@@ -262,6 +280,8 @@ export const PROJECTS = [
     // The Play listing (id app.app.mentorstower) returns 404 as of 2026-10-17.
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Mentor discovery", "Mentor profile", "Mentorship request"],
     caseStudy: {
       overview: "Users find mentors in a specific area and get mentorship from experienced practitioners.",
       problem: null,
@@ -273,9 +293,10 @@ export const PROJECTS = [
       ],
       team: null,
       constraints: null,
-      approach: null,
+      approach:
+        "Ship, then iterate: after launch the team watched Play Console analytics and user feedback, and fed fixes and new features back into regular updates.",
       decisions: null,
-      outcomes: null,
+      outcomes: ["Published on Google Play."],
       lessons: null,
     },
   },
@@ -293,6 +314,8 @@ export const PROJECTS = [
     stack: ["Flutter", "Dart", "Maps"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Customer booking", "Live map: customer and driver", "Driver view"],
     caseStudy: {
       overview: "A Flutter logistics application connecting customers and drivers.",
       problem: null,
@@ -310,21 +333,23 @@ export const PROJECTS = [
     },
   },
   {
-    slug: "msf",
-    title: "MSF",
+    slug: "saleslify",
+    title: "Saleslify",
     tagline: "Inventory management platform",
     kind: "client",
     platform: "Flutter",
     status: "Client project",
     roles: ["mobile", "design"],
     summary:
-      "Flutter front end for an inventory management platform — designer wireframes turned into responsive, interactive components.",
+      "Flutter front end for Saleslify, an inventory management platform — designer wireframes turned into responsive, interactive components.",
     myRole: "Flutter developer",
     stack: ["Flutter", "Dart", "State management", "Custom widgets"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Inventory dashboard", "Product / stock list", "Add or edit item", "Tablet or responsive layout"],
     caseStudy: {
-      overview: "An inventory management platform built with Flutter.",
+      overview: "Saleslify is an inventory management platform with a Flutter front end.",
       problem: null,
       contribution: [
         "Designed user interfaces in Flutter.",
@@ -333,9 +358,10 @@ export const PROJECTS = [
         "Implemented state management for data handling and UI updates.",
         "Added custom widgets, animations and gestures.",
       ],
-      team: null,
+      team: "Worked closely with the project's designers.",
       constraints: null,
-      approach: null,
+      approach:
+        "Designer wireframes and mockups were translated into interactive Flutter components, with responsive layouts so the screens work across device sizes.",
       decisions: null,
       outcomes: null,
       lessons: null,
@@ -355,6 +381,8 @@ export const PROJECTS = [
     stack: ["Audio streaming"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Player / now playing", "Station or schedule view"],
     caseStudy: {
       overview: "An online radio application.",
       problem: null,
@@ -386,6 +414,8 @@ export const PROJECTS = [
     stack: ["Kotlin", "Java → Kotlin migration"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Hymn list", "Hymn reader", "Liturgy view"],
     caseStudy: {
       overview: "An app supporting personal spiritual growth and participation in communal worship.",
       problem: null,
@@ -396,37 +426,12 @@ export const PROJECTS = [
       team: null,
       constraints: null,
       approach: null,
-      decisions: null,
-      outcomes: null,
-      lessons: null,
-    },
-  },
-  {
-    slug: "go-taxi",
-    title: "Go",
-    tagline: "Taxi ordering app",
-    kind: "personal",
-    platform: "Android",
-    status: "Personal project",
-    roles: ["mobile", "leadership"],
-    summary:
-      "A taxi-ordering app. I led a team of designers, developers and a product manager, and built the core logic and Firebase integration.",
-    myRole: "Team lead & developer",
-    stack: ["Android", "Firebase"],
-    links: {},
-    screenshot: null,
-    caseStudy: {
-      overview: "A taxi ordering application.",
-      problem: null,
-      contribution: [
-        "Led a team of designers, developers and a product manager.",
-        "Integrated Firebase and all back-end dependencies.",
-        "Implemented the app's core logic and functionality.",
+      decisions: [
+        {
+          title: "Rewrite in Kotlin alongside the redesign",
+          body: "The redesign was delivered as a new Kotlin version rather than layered onto the existing Java codebase.",
+        },
       ],
-      team: "Designers, developers and a product manager.",
-      constraints: null,
-      approach: null,
-      decisions: null,
       outcomes: null,
       lessons: null,
     },
@@ -448,15 +453,17 @@ export const PROJECTS = [
       code: "https://github.com/grittydude/benzemi-resources",
     },
     screenshot: null,
+    screens: [],
+    screenSlots: ["Homepage", "Programs page", "Mobile view"],
     caseStudy: {
       overview: "Program and training information aimed at graduates moving into industry.",
       problem: null,
-      contribution: ["Built and shipped the site."],
+      contribution: ["Built and shipped the site with React and Vite."],
       team: null,
       constraints: null,
       approach: null,
       decisions: null,
-      outcomes: ["Live in production at bezimeniresources.com."],
+      outcomes: ["Live at bezimeniresources.com."],
       lessons: null,
     },
   },
@@ -473,7 +480,12 @@ export const PROJECTS = [
     myRole: "Web developer",
     stack: ["Web"],
     links: { live: "https://hotreket.com/" },
-    screenshot: { src: "projects/house-on-the-rock-eket/home.jpg", alt: "House on the Rock, Eket homepage with navigation and a service-times banner" },
+    screenshot: {
+      src: "projects/house-on-the-rock-eket/home.jpg",
+      alt: "House on the Rock, Eket homepage with navigation and a service-times banner",
+    },
+    screens: [],
+    screenSlots: ["Sermons page", "Events page", "Mobile view"],
     caseStudy: {
       overview: "A community website for House on the Rock, Eket.",
       problem: null,
@@ -482,7 +494,7 @@ export const PROJECTS = [
       constraints: null,
       approach: null,
       decisions: null,
-      outcomes: ["Live in production at hotreket.com."],
+      outcomes: ["Live at hotreket.com."],
       lessons: null,
     },
   },
@@ -500,6 +512,8 @@ export const PROJECTS = [
     stack: ["React 19", "Vite", "React Router", "CSS Modules"],
     links: { code: "https://github.com/grittydude/ikechukwu-achom-portfolio" },
     screenshot: null,
+    screens: [],
+    screenSlots: [],
     caseStudy: {
       overview:
         "A recruiter-focused portfolio where each career path has its own URL that makes sense on its own.",
@@ -515,14 +529,19 @@ export const PROJECTS = [
         "Static hosting on GitHub Pages — no server rendering.",
         "No new dependencies beyond the existing React/Vite stack.",
       ],
-      approach: null,
+      approach:
+        "Content first: every page reads from the same data files, so adding a project or a role-specific CV is a data change, not a layout change.",
       decisions: [
         {
           title: "Static HTML per route instead of a prerender framework",
           body: "Link previews on LinkedIn and Slack don't run JavaScript. Writing a small HTML file per route with the right meta tags fixes that without adding SSR tooling.",
         },
+        {
+          title: "Hide gaps instead of filling them",
+          body: "Case-study fields without real content are omitted in production and flagged in development, so nothing on the site is invented to look complete.",
+        },
       ],
-      outcomes: null,
+      outcomes: ["Live on GitHub Pages, with a shareable URL per career path."],
       lessons: null,
     },
   },
@@ -540,14 +559,22 @@ export const PROJECTS = [
     stack: ["Flutter", "Firebase", "Google Maps API"],
     links: {},
     screenshot: null,
+    screens: [],
+    screenSlots: ["Map / nearby businesses", "Business listing", "Search results"],
     caseStudy: {
       overview: "A directory that improves local businesses' visibility, with Eket as the first market.",
-      problem: null,
+      problem:
+        "Local shops and businesses have little visibility online, which makes them hard to discover.",
       contribution: null,
       team: null,
       constraints: null,
       approach: null,
-      decisions: null,
+      decisions: [
+        {
+          title: "Launch in one city first",
+          body: "Eket is the initial launch market and case study, so listings and recommendations can be built up properly in one place before expanding.",
+        },
+      ],
       outcomes: null,
       lessons: null,
     },
@@ -565,37 +592,75 @@ export const PROJECTS = [
     stack: ["Flutter"],
     links: {},
     screenshot: null,
-    caseStudy: null,
+    screens: [],
+    screenSlots: ["Spending overview", "Add expense", "Budget view"],
+    caseStudy: {
+      overview: "A personal finance and budgeting app that helps users track expenses and understand their spending habits.",
+      problem: null,
+      contribution: null,
+      team: null,
+      constraints: null,
+      approach: null,
+      decisions: null,
+      outcomes: null,
+      lessons: null,
+    },
   },
   {
     slug: "rms",
     title: "RMS",
     tagline: "Request management system",
-    kind: "personal",
+    kind: "client",
     platform: null,
-    status: "In development",
-    roles: ["leadership"],
-    summary: "A request management system.",
+    status: "Client project",
+    roles: [],
+    summary: "A request management system built for a client.",
     myRole: null,
     stack: [],
     links: {},
     screenshot: null,
-    caseStudy: null,
+    screens: [],
+    screenSlots: ["Request list / dashboard", "Request detail and status", "Approval flow"],
+    caseStudy: {
+      overview: "A request management system delivered for a client.",
+      problem: null,
+      contribution: null,
+      team: null,
+      constraints: null,
+      approach: null,
+      decisions: null,
+      outcomes: null,
+      lessons: null,
+    },
   },
   {
     slug: "ifusion",
     title: "iFusion",
     tagline: "Enterprise document & asset management",
-    kind: "personal",
+    kind: "employer",
     platform: null,
-    status: "In development",
-    roles: ["leadership"],
-    summary: "An enterprise product for managing documents and assets.",
+    status: "Company product",
+    roles: [],
+    confidential: true,
+    summary: "An enterprise document and asset management product owned by my employer. Details are confidential.",
     myRole: null,
     stack: [],
     links: {},
     screenshot: null,
-    caseStudy: null,
+    screens: [],
+    screenSlots: [],
+    caseStudy: {
+      overview:
+        "iFusion is a company-owned enterprise product for managing documents and assets. Because it's proprietary, this page describes it only at a high level.",
+      problem: null,
+      contribution: null,
+      team: null,
+      constraints: ["Company-owned and confidential — no screenshots, code or client details can be shared."],
+      approach: null,
+      decisions: null,
+      outcomes: null,
+      lessons: null,
+    },
   },
   {
     slug: "iot-app",
@@ -610,6 +675,8 @@ export const PROJECTS = [
     stack: ["Java", "MQTT", "Android"],
     links: { code: "https://github.com/Ikey22/IoTApp" },
     screenshot: null,
+    screens: [],
+    screenSlots: ["Switch control screen", "The hardware it controls"],
     caseStudy: {
       overview: "An IoT companion app that switches a device on and off.",
       problem: null,
@@ -619,7 +686,8 @@ export const PROJECTS = [
       ],
       team: null,
       constraints: null,
-      approach: null,
+      approach:
+        "MQTT's lightweight publish/subscribe model suits small devices: the app publishes on/off messages that the switch subscribes to.",
       decisions: null,
       outcomes: null,
       lessons: null,
@@ -638,7 +706,19 @@ export const PROJECTS = [
     stack: ["Android"],
     links: { code: "https://github.com/Ikey22/ISolveNotes" },
     screenshot: null,
-    caseStudy: null,
+    screens: [],
+    screenSlots: ["Notes list", "Note editor", "To-do view"],
+    caseStudy: {
+      overview: "An Android notebook app for creating and saving notes and to-dos.",
+      problem: null,
+      contribution: ["Built the app."],
+      team: null,
+      constraints: null,
+      approach: null,
+      decisions: null,
+      outcomes: null,
+      lessons: null,
+    },
   },
 ];
 
@@ -646,5 +726,5 @@ export const getProject = (slug) => PROJECTS.find((p) => p.slug === slug);
 export const projectsFor = (roleId) => PROJECTS.filter((p) => p.roles.includes(roleId));
 export const FEATURED_PROJECTS = PROJECTS.filter((p) => p.featured);
 
-/** A project gets its own page only when there is something beyond the card. */
+/** Every project now has a case-study page; kept as a function for the routes. */
 export const hasCaseStudy = (p) => Boolean(p.caseStudy);

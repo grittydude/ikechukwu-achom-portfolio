@@ -26,8 +26,8 @@ export default function Projects() {
             </span>
           </h1>
           <p className={styles.sub}>
-            Client apps, personal products and programs. Projects with a case study cover the problem, my part in it,
-            the decisions and the results. Client work under NDA is described without screenshots or code.
+            Client apps, personal products and programs. Each one opens a case study: the problem, my part in it, the
+            decisions and the results. Confidential client and company work is described without screenshots or code.
           </p>
 
           <div className={styles.filters} role="group" aria-label="Filter projects by role">

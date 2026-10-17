@@ -23,8 +23,8 @@ export const ROLES = [
     capabilities: [
       {
         title: "Flutter & Dart",
-        body: "Feature-first Flutter apps with Riverpod, go_router and Freezed. Dedline, VanBoss and MSF are Flutter builds; Blood Donation was rebuilt in Flutter from Kotlin.",
-        evidence: ["dedline", "vanboss", "msf", "blood-donation-app"],
+        body: "Feature-first Flutter apps with Riverpod, go_router and Freezed. Dedline, VanBoss and Saleslify are Flutter builds; Blood Donation was rebuilt in Flutter from Kotlin.",
+        evidence: ["dedline", "vanboss", "saleslify", "blood-donation-app"],
       },
       {
         title: "Native Android & React Native",
@@ -39,7 +39,7 @@ export const ROLES = [
       {
         title: "Backends, auth & data",
         body: "Firebase and Supabase for auth, storage and data, REST/Retrofit integrations, row-level security, and server-side functions that keep keys off the device.",
-        evidence: ["dedline", "go-taxi", "blood-donation-app"],
+        evidence: ["dedline", "blood-donation-app", "multi-tenant-banking"],
       },
       {
         title: "Shipping & maintenance",
@@ -124,7 +124,7 @@ export const ROLES = [
       {
         title: "Wireframes to working UI",
         body: "Turned designers' wireframes and mockups into interactive, responsive Flutter components, with custom widgets, animations and gestures.",
-        evidence: ["msf", "vanboss", "radio-basar"],
+        evidence: ["saleslify", "vanboss", "radio-basar"],
       },
       {
         title: "Product thinking",
@@ -153,23 +153,23 @@ export const ROLES = [
     title: "Leading teams",
     highlight: "and programs that ship",
     intro:
-      "I lead mobile delivery at KodeHauz and run KodeCamp, its training program — four bootcamps, 700+ graduates, and a 4,000+ member community. I'm most useful where product decisions, engineering trade-offs and people all have to line up.",
+      "I lead mobile delivery at KodeHauz and run KodeCamp, its training program — seven bootcamps and 10,000+ participants so far, plus a 4,000+ member community. I'm most useful where product decisions, engineering trade-offs and people all have to line up.",
     glance: [
       { label: "Current", value: "Senior Tech Lead & Operations Manager" },
-      { label: "Program", value: "KodeCamp — 700+ graduates" },
+      { label: "Program", value: "KodeCamp — 7 bootcamps, 10,000+ participants" },
       { label: "Community", value: "4,000+ members" },
       { label: "Tools", value: "Jira, Trello, Linear" },
     ],
     capabilities: [
       {
         title: "Program management",
-        body: "Led the team that ran four KodeCamp bootcamps and the platform that graduated 700+ trainees; built and manage a 4,000+ member learning community.",
+        body: "Lead the team behind KodeCamp — seven bootcamps and 10,000+ participants so far — and manage its 4,000+ member learning community.",
         evidence: ["kodecamp"],
       },
       {
         title: "Technical leadership",
-        body: "Lead the KodeHauz mobile team; led product teams of designers, developers and product managers on Craftzone, Go and Mentors Tower.",
-        evidence: ["craftzone", "go-taxi", "mentors-tower"],
+        body: "Lead the KodeHauz mobile team, and led the product teams behind Craftzone and Mentors Tower.",
+        evidence: ["craftzone", "mentors-tower"],
       },
       {
         title: "Scoping & prioritisation",
@@ -186,7 +186,7 @@ export const ROLES = [
     meta: {
       title: "Ikechukwu Achom — Product & Technical Leadership",
       description:
-        "Leadership portfolio: Senior Technical Lead & Operations Manager at KodeHauz and Program Manager of KodeCamp — 4 bootcamps, 700+ graduates, a 4,000+ member community.",
+        "Leadership portfolio: Senior Technical Lead & Operations Manager at KodeHauz and Program Manager of KodeCamp — 7 bootcamps, 10,000+ participants, a 4,000+ member community.",
     },
   },
 ];

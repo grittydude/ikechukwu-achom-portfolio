@@ -1,4 +1,5 @@
 import { PROJECT_KINDS, hasCaseStudy } from "../../data/projects";
+import { SHOW_SOURCE_LINKS } from "../../data/site";
 import ProjectVisual from "./ProjectVisual";
 import SmartLink from "../shared/SmartLink";
 import Reveal from "../ui/Reveal";
@@ -8,7 +9,7 @@ import styles from "./ProjectShowcase.module.css";
 const LINK_LABELS = { live: "Visit site", demo: "Try the demo", store: "Google Play", code: "Source code" };
 
 export function ProjectLinks({ links, className = "" }) {
-  const entries = Object.entries(links ?? {}).filter(([, href]) => href);
+  const entries = Object.entries(links ?? {}).filter(([key, href]) => href && (SHOW_SOURCE_LINKS || key !== "code"));
   if (!entries.length) return null;
   return (
     <ul className={`${styles.links} ${className}`}>

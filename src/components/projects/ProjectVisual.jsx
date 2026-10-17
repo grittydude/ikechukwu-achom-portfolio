@@ -21,7 +21,7 @@ function Skeleton({ lines = 4 }) {
  */
 export default function ProjectVisual({ project, size = "md" }) {
   const isWeb = project.platform === "Web";
-  const isProgram = project.kind === "program";
+  const isProgram = Boolean(project.highlight);
 
   if (project.screenshot) {
     return (
@@ -49,8 +49,8 @@ export default function ProjectVisual({ project, size = "md" }) {
     <div className={`${styles.visual} ${styles[size]}`} aria-hidden="true">
       {isProgram ? (
         <div className={styles.program}>
-          <span className={styles.programNum}>700+</span>
-          <span className={styles.programLabel}>graduates · 4 bootcamps</span>
+          <span className={styles.programNum}>{project.highlight.value}</span>
+          <span className={styles.programLabel}>{project.highlight.label}</span>
         </div>
       ) : isWeb ? (
         <div className={styles.browser}>
@@ -76,7 +76,11 @@ export default function ProjectVisual({ project, size = "md" }) {
           </div>
         </div>
       )}
-      {project.confidential && <span className={styles.badge}>Confidential client work</span>}
+      {project.confidential && (
+        <span className={styles.badge}>
+          {project.kind === "employer" ? "Confidential company project" : "Confidential client work"}
+        </span>
+      )}
     </div>
   );
 }

@@ -34,16 +34,17 @@ export const PERSONAL = {
 
   linkedin: "https://www.linkedin.com/in/ikechukwuachom/",
   linkedinHandle: "in/ikechukwuachom",
-  github: "https://github.com/Ikey22",
-  githubHandle: "github.com/Ikey22",
-  // Second account that holds the more recent client and web repos.
-  githubAlt: "https://github.com/grittydude",
+  github: "https://github.com/grittydude",
+  githubHandle: "github.com/grittydude",
+  // Older account referenced on the CV (IoTApp, iSolve Notes).
+  githubLegacy: "https://github.com/Ikey22",
 
-  // Verified numbers only — every figure below appears in the CV.
+  // Verified numbers only — from the CV or confirmed by the owner (KodeCamp
+  // totals confirmed 2026-10-17; the CV still shows the older 700+/4 figures).
   stats: [
-    { num: "700+", label: "KodeCamp trainees graduated", source: "cv" },
+    { num: "10,000+", label: "KodeCamp participants", source: "owner" },
     { num: "4,000+", label: "Tech community members", source: "cv" },
-    { num: "4", label: "Bootcamps delivered", source: "cv" },
+    { num: "7", label: "Bootcamps delivered", source: "owner" },
     { num: "2019", label: "Leading mobile at KodeHauz since", source: "cv" },
   ],
 };

@@ -23,6 +23,10 @@ export function publicUrl(file) {
   return `${BASE_PATH}${file.replace(/^\//, "")}`;
 }
 
+// Project "Source code" links are hidden for now. The repo URLs stay in
+// data/projects.js — flip this to true to show them again.
+export const SHOW_SOURCE_LINKS = false;
+
 // CV files live in public/cv/. Only one master CV exists today; when
 // role-specific CVs are added, point the matching key at the new file and
 // every page that uses `cvFor(role)` picks it up automatically.

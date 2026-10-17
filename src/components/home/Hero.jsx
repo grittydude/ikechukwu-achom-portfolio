@@ -69,9 +69,9 @@ export default function Hero() {
 
             <div className={styles.proof}>
               <p className={styles.proofNum}>
-                700+ <span>graduates</span>
+                10,000+ <span>participants</span>
               </p>
-              <p className={styles.proofLabel}>across 4 KodeCamp bootcamps I lead</p>
+              <p className={styles.proofLabel}>across 7 bootcamps in the KodeCamp program I manage</p>
             </div>
           </div>
 

@@ -21,7 +21,7 @@ const PRINCIPLES = [
   },
   {
     title: "Grow the people around the product",
-    body: "Running KodeCamp, which has graduated 700+ developers, taught me that a team's skill sets the ceiling on what it can ship.",
+    body: "Running KodeCamp, with 10,000+ participants across seven bootcamps, taught me that a team's skill sets the ceiling on what it can ship.",
   },
 ];
 

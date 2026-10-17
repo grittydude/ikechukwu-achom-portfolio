@@ -14,8 +14,8 @@ export default function AboutIntro({ as = "h2", children, showStats = true }) {
       <Reveal className={styles.visual}>
         <Portrait variant="about">
           <div className={`${styles.float} ${styles.floatTop}`}>
-            <span className={styles.floatNum}>700+</span>
-            <span className={styles.floatLabel}>KodeCamp graduates</span>
+            <span className={styles.floatNum}>10,000+</span>
+            <span className={styles.floatLabel}>KodeCamp participants</span>
           </div>
           <div className={`${styles.float} ${styles.floatBottom}`}>
             <span className={styles.floatIcon}>
