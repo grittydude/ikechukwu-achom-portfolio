@@ -1,70 +1,77 @@
 import { Link } from "react-router-dom";
 import { PERSONAL } from "../../data/personal";
-import { IconEmail, IconWhatsApp } from "../ui/Icons";
+import { ROLES } from "../../data/roles";
+import { cvFor } from "../../data/site";
+import SocialLinks from "../shared/SocialLinks";
 import styles from "./Footer.module.css";
 
-const COLUMNS = [
-  {
-    title: "Books",
-    links: [
-      { label: "All Books", to: "/books" },
-      { label: "Fans of Excellence", to: "/books/fans-of-excellence" },
-      { label: "Grit365", to: "/books/grit365" },
-    ],
-  },
-  {
-    title: "Software",
-    links: [
-      { label: "Dedline", to: "/dedline" },
-      { label: "Ideas", to: "/ideas" },
-    ],
-  },
-  {
-    title: "About",
-    links: [
-      { label: "About Me", to: "/about" },
-      { label: "Get In Touch", to: "/about#contact" },
-    ],
-  },
+const EXPLORE = [
+  { label: "Projects", to: "/projects" },
+  { label: "About & Experience", to: "/about" },
+  { label: "Dedline", to: "/projects/dedline" },
+  { label: "Books", to: "/books" },
 ];
 
 export default function Footer() {
+  const cv = cvFor();
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
+      <div className={styles.inner}>
         <div className={styles.brand}>
-          <Link to="/" className={styles.logo}>{PERSONAL.name}</Link>
-          <p className={styles.tagline}>Mindset. Discipline. Execution.</p>
-          <div className={styles.socials}>
-            <a href={`mailto:${PERSONAL.email}`} className="social-btn" aria-label="Email">
-              <IconEmail size={16} />
-            </a>
-            <a href={PERSONAL.whatsappHref} target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="WhatsApp">
-              <IconWhatsApp size={16} />
-            </a>
-          </div>
+          <Link to="/" className={styles.logo}>
+            {PERSONAL.name}
+            <span>.</span>
+          </Link>
+          <p className={styles.tagline}>
+            {PERSONAL.headline}. {PERSONAL.currentRole} at {PERSONAL.currentCompany}.
+          </p>
+          <SocialLinks className={styles.socials} />
         </div>
 
-        <div className={styles.columns}>
-          {COLUMNS.map((col) => (
-            <div key={col.title} className={styles.column}>
-              <h4 className={styles.colTitle}>{col.title}</h4>
-              <ul>
-                {col.links.map((link) => (
-                  <li key={link.to}>
-                    <Link to={link.to}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <nav className={styles.columns} aria-label="Footer">
+          <div>
+            <h2 className={styles.colTitle}>Portfolios</h2>
+            <ul>
+              {ROLES.map((r) => (
+                <li key={r.id}>
+                  <Link to={r.path}>{r.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className={styles.colTitle}>Explore</h2>
+            <ul>
+              {EXPLORE.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className={styles.colTitle}>Connect</h2>
+            <ul>
+              <li>
+                <a href={`mailto:${PERSONAL.email}`}>{PERSONAL.email}</a>
+              </li>
+              <li>
+                <a href={PERSONAL.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li>
+                <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li>
+                <a href={cv.href} download={cv.fileName}>Download CV (PDF)</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
       <div className={styles.bottom}>
-        <p className={styles.copy}>
-          © {new Date().getFullYear()} {PERSONAL.name}. All rights reserved.
-        </p>
+        <p>© {new Date().getFullYear()} {PERSONAL.name}</p>
+        <a href="#top" className={styles.top}>Back to top ↑</a>
       </div>
     </footer>
   );

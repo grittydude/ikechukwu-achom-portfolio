@@ -1,0 +1,131 @@
+.head {
+  margin-top: calc(-1 * var(--nav-h));
+  padding-top: calc(var(--nav-h) + clamp(40px, 6vw, 72px));
+  background: var(--bg);
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.principle {
+  position: relative;
+  padding: 28px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.num {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--border);
+  letter-spacing: -0.05em;
+}
+
+.principle h3 {
+  position: relative;
+  max-width: 80%;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.principle p {
+  position: relative;
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.eduGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.degree {
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--ink);
+  color: #fff;
+}
+
+.degreeYear {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-strong);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.degree h3 {
+  margin-top: 18px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.degree p {
+  margin-top: 4px;
+  color: var(--on-ink-muted);
+}
+
+/* Certification cards with faded numbers, after the reference's awards row */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: 12px;
+}
+
+.cert {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.certNum {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--surface-2);
+  line-height: 1;
+}
+
+.cert strong {
+  position: relative;
+  max-width: 85%;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.cert span:last-child {
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 900px) {
+  .principles,
+  .eduGrid {
+    grid-template-columns: 1fr;
+  }
+}

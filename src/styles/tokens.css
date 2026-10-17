@@ -1,61 +1,74 @@
-/* ── DESIGN TOKENS ── */
+/* ── DESIGN TOKENS ──
+   Light editorial palette from the reference design: off-white canvas,
+   near-black ink, one vivid orange accent, black marquee bands. */
 :root {
-  /* Base neutrals */
-  --bg: #0b0b10;
-  --card: #131217;
-  --card2: #18161d;
-  --text: #f4f1ea;
-  --text-muted: #a8a29a;
-  --text-dim: #6f6a63;
+  /* Neutrals */
+  --bg: #f4f4f4;            /* page canvas / alternate sections */
+  --surface: #ffffff;       /* main sections, cards */
+  --surface-2: #efefef;     /* rows, chips, quiet fills */
+  --ink: #0f0f0f;           /* text, black pills, bands */
+  --ink-2: #1c1c1c;
+  --text: #0f0f0f;
+  --text-muted: #55555c;    /* 6.9:1 on white */
+  --text-dim: #6b6b73;      /* 5.3:1 on white — smallest body text floor */
+  --on-ink: #ffffff;
+  --on-ink-muted: #b5b5bb;
 
-  /* Sitewide primary — Mindset gold, promoted to the parent-brand color */
-  --primary: #e8a33d;
-  --primary-glow: rgba(232, 163, 61, 0.35);
-  --primary-subtle: rgba(232, 163, 61, 0.12);
-  --accent: #f2c572;
-  --accent-glow: rgba(242, 197, 114, 0.25);
-  --accent-subtle: rgba(242, 197, 114, 0.08);
+  /* Accent */
+  --accent: #f4511e;        /* fills, large display text (3:1+ large-text) */
+  --accent-strong: #c93a0c; /* small text, button fills with white text (5.1:1) */
+  --accent-tint: #fff1eb;
+  --accent-ring: rgba(244, 81, 30, 0.35);
 
-  /* Borders */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(232, 163, 61, 0.32);
+  /* Lines & shadows */
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --shadow-sm: 0 1px 2px rgba(15, 15, 15, 0.05);
+  --shadow: 0 10px 30px -12px rgba(15, 15, 15, 0.18);
 
-  /* Gradients (sitewide / Mindset) */
-  --gradient-primary: linear-gradient(135deg, #e8a33d, #c9772a);
-  --gradient-accent: linear-gradient(135deg, #f2c572, #e8a33d);
-  --gradient-hero: linear-gradient(135deg, #e8a33d 0%, #f2c572 100%);
-
-  /* Pillar accents — used only on each product's own page/card */
-  --pillar-mindset: #e8a33d;
-  --pillar-mindset-glow: rgba(232, 163, 61, 0.3);
-  --pillar-mindset-subtle: rgba(232, 163, 61, 0.12);
-
-  --pillar-discipline: #c1502e;
-  --pillar-discipline-glow: rgba(193, 80, 46, 0.3);
-  --pillar-discipline-subtle: rgba(193, 80, 46, 0.12);
-
-  --pillar-execution: #7c3aed;
-  --pillar-execution-accent: #22d3ee;
-  --pillar-execution-glow: rgba(124, 58, 237, 0.35);
-  --pillar-execution-subtle: rgba(124, 58, 237, 0.12);
-  --pillar-execution-gradient: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
+  /* Legacy aliases — keep the Books/Dedline pages rendering on the new theme */
+  --card: var(--surface);
+  --card2: var(--surface-2);
+  --primary: var(--accent-strong);
+  --primary-glow: rgba(244, 81, 30, 0.25);
+  --primary-subtle: var(--accent-tint);
+  --accent-glow: rgba(244, 81, 30, 0.2);
+  --accent-subtle: var(--accent-tint);
+  --border-accent: rgba(244, 81, 30, 0.35);
+  --gradient-primary: linear-gradient(135deg, #f4511e, #c93a0c);
+  --gradient-accent: linear-gradient(135deg, #f4511e, #c93a0c);
+  --gradient-hero: linear-gradient(135deg, #f4511e 0%, #c93a0c 100%);
+  --pillar-mindset: #c93a0c;
+  --pillar-mindset-glow: rgba(201, 58, 12, 0.2);
+  --pillar-mindset-subtle: #fff1eb;
+  --pillar-discipline: #9a3412;
+  --pillar-discipline-glow: rgba(154, 52, 18, 0.2);
+  --pillar-discipline-subtle: #fdeee6;
+  --pillar-execution: #0f0f0f;
+  --pillar-execution-accent: #f4511e;
+  --pillar-execution-glow: rgba(15, 15, 15, 0.15);
+  --pillar-execution-subtle: #efefef;
+  --pillar-execution-gradient: linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 100%);
 
   /* Typography */
-  --font-display: "Syne", sans-serif;
-  --font-body: "DM Sans", sans-serif;
-  --font-editorial: "Fraunces", serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-editorial: "Plus Jakarta Sans", system-ui, sans-serif;
 
-  /* Spacing */
-  --radius: 16px;
+  /* Radii */
   --radius-sm: 8px;
-  --radius-lg: 24px;
-  --radius-pill: 100px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
 
   /* Motion */
-  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.25s var(--ease);
 
-  /* Section padding */
-  --section-py: 120px;
-  --section-px: 5vw;
-  --max-width: 1200px;
+  /* Layout */
+  --section-py: clamp(64px, 9vw, 112px);
+  --section-px: clamp(16px, 4vw, 40px);
+  --max-width: 1160px;
+  --nav-h: 76px;
 }

@@ -1,116 +1,58 @@
-# Ikechukwu Achom — Flutter Developer Portfolio
+# Ikechukwu Achom — Portfolio
 
-A premium, production-ready portfolio built with **React + Vite + CSS Modules** following clean architecture and strict separation of concerns.
+Recruiter-focused portfolio built with **React 19 + Vite + React Router + CSS Modules**, deployed to GitHub Pages at
+`https://grittydude.github.io/ikechukwu-achom-portfolio/`.
 
----
+One data layer drives a homepage, four standalone career-path pages, a project index and case studies. Before launch, see **[CONTENT-TODO.md](CONTENT-TODO.md)** for items to confirm or supply.
 
-## Project Structure
+## Routes
+
+| Path | Purpose |
+|------|---------|
+| `/` | Identity, career-path picker, selected work, experience, toolkit |
+| `/mobile-engineer` | Mobile engineering portfolio (shareable on its own) |
+| `/web-developer` | Web development portfolio |
+| `/product-design` | Product design portfolio |
+| `/product-leadership` | Product & technical leadership portfolio |
+| `/projects` | All projects; `?role=mobile` etc. filters and is shareable |
+| `/projects/:slug` | Case study (only for projects with `caseStudy` data) |
+| `/about` | Background, principles, full experience, education, certifications |
+| `/books`, `/books/:slug`, `/dedline`, `/ideas` | Writing and product pages from the previous site, kept and linked from the footer |
+
+Every page ends with the shared contact section (`#contact`), with a CV download, email, LinkedIn, GitHub and a Formspree form.
+
+## Where content lives
 
 ```
-src/
-├── data/                     # Pure data layer (no JSX, no logic)
-│   ├── personal.js           # Name, bio, stats, nav links, social URLs
-│   ├── projects.js           # All project cards
-│   ├── techStack.js          # Tech stack items
-│   ├── experience.js         # Career timeline entries
-│   └── testimonials.js       # Client testimonials
-│
-├── hooks/                    # Reusable stateful logic (no UI)
-│   ├── useInView.js          # IntersectionObserver scroll-reveal
-│   ├── useNavScroll.js       # Detects scroll-past-threshold for nav
-│   ├── useScrollProgress.js  # 0-1 reading progress value
-│   └── useCursorGlow.js      # Mouse position for ambient glow
-│
-├── utils/
-│   └── helpers.js            # scrollToSection(), cn(), openLink()
-│
-├── styles/                   # Global styles only
-│   ├── tokens.css            # CSS custom properties (design tokens)
-│   ├── base.css              # Reset + body defaults
-│   └── utilities.css         # Shared classes: .btn, .reveal, .section-inner
-│
-├── components/
-│   ├── ui/                   # Primitive reusable atoms
-│   │   ├── Icons.jsx
-│   │   ├── Reveal.jsx
-│   │   └── SectionHeader.jsx
-│   ├── layout/               # Persistent chrome
-│   │   ├── Navbar.jsx + .module.css
-│   │   ├── Footer.jsx + .module.css
-│   │   └── ScrollWidgets.jsx + .module.css
-│   └── sections/             # One component per page section
-│       ├── Loader, Hero, StatsBar, About, TechStack
-│       ├── Projects, ProjectMockup, Experience
-│       ├── Testimonials, Contact
-│       └── (each has its own .module.css)
-│
-├── App.jsx                   # Composition root
-└── main.jsx                  # React DOM entry
+src/data/
+├── personal.js     # name, positioning, contact, verified stats, photo path
+├── roles.js        # the four career paths: copy, capabilities + evidence, meta
+├── projects.js     # projects + case-study fields (null = hidden in prod, flagged in dev)
+├── experience.js   # employment history from the CV, tagged by role
+├── credentials.js  # education + certifications
+├── toolkit.js      # tools grouped by discipline (no proficiency percentages)
+├── seo.js          # per-route titles/descriptions (used at runtime and build time)
+└── site.js         # deploy origin/base path, CV file mapping
 ```
 
----
+- **Add a project:** append to `PROJECTS` in `projects.js`. Give it `roles` so it shows on the right pages, and a `caseStudy` object if it deserves its own page. Put screenshots in `public/projects/<slug>/`.
+- **Add a role-specific CV:** drop the PDF in `public/cv/` and add a key to `CV_FILES` in `site.js` (e.g. `mobile`).
+- **Add your photo:** see `photo` in `personal.js`.
+- **Design tokens:** `src/styles/tokens.css` (light canvas, ink black, orange `#f4511e`; `--accent-strong` `#c93a0c` for small text and buttons, so contrast passes AA).
 
-## Quick Start
+## Scripts
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # production build -> dist/
-npm run preview    # preview production build locally
+npm run dev        # http://localhost:5173/ikechukwu-achom-portfolio/
+npm run lint
+npm run build      # vite build + scripts/generate-route-html.mjs
+npm run preview    # serve dist/ at http://localhost:4173/ikechukwu-achom-portfolio/
+npm run deploy     # build and publish dist/ to the gh-pages branch
 ```
 
----
+`scripts/generate-route-html.mjs` runs after `vite build`. For every route in `src/data/seo.js` it writes `dist/<route>/index.html` with that route's title, description, canonical URL and Open Graph tags. That way LinkedIn and Slack previews are right without JavaScript, and direct visits get a 200 instead of the `404.html` redirect. It also writes `sitemap.xml` and `robots.txt`. Unknown deep links still fall back to the `404.html` → `index.html` SPA redirect.
 
-## Customisation
+## Moving to a custom domain
 
-- **Personal info** → `src/data/personal.js`
-- **Projects** → `src/data/projects.js`
-- **Tech stack** → `src/data/techStack.js`
-- **Timeline** → `src/data/experience.js`
-- **Testimonials** → `src/data/testimonials.js`
-- **Colors/fonts** → `src/styles/tokens.css`
-- **Resume** → place `resume.pdf` in `public/`, update href in `Hero.jsx`
-
-### Connect the Contact Form (Formspree)
-In `src/components/sections/Contact.jsx`, replace the mock timeout:
-```js
-const res = await fetch("https://formspree.io/f/YOUR_ID", {
-  method: "POST",
-  body: new FormData(e.target),
-  headers: { Accept: "application/json" },
-});
-setSent(res.ok);
-```
-
----
-
-## Deployment
-
-### Netlify (drag & drop)
-1. `npm run build`
-2. Drag `dist/` onto app.netlify.com
-
-### Vercel
-```bash
-npx vercel
-```
-Or connect your GitHub repo — Vite is auto-detected.
-
-### GitHub Pages
-```bash
-npm i -D gh-pages
-# Add to package.json scripts: "deploy": "npm run build && gh-pages -d dist"
-npm run deploy
-```
-
----
-
-## Tech Stack
-
-| | |
-|---|---|
-| Framework | React 19 + Vite |
-| Styles | CSS Modules + CSS custom properties |
-| Animations | CSS keyframes + IntersectionObserver (Framer Motion available) |
-| Fonts | Syne (display) + DM Sans (body) via Google Fonts |
-| No Tailwind | No component library | No CSS-in-JS |
+Update `SITE_ORIGIN`/`BASE_PATH` in `src/data/site.js`, `base` in `vite.config.js`, `basename` in `src/main.jsx`, the absolute URLs in `index.html`, and `pathSegmentsToKeep` in `public/404.html`. `robots.txt` only takes effect at a domain root.

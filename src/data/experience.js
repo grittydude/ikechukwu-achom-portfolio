@@ -1,30 +1,95 @@
+// Employment history, transcribed from the CV. `roles` controls which
+// career-path pages surface each entry (mobile | web | design | leadership).
+// Bullets stay close to the CV wording on purpose — edit the CV first, then here.
+
 export const EXPERIENCE = [
   {
-    id: "senior",
-    period: "2021 — Present",
-    role: "Senior Flutter Developer",
+    id: "innovanitics",
+    period: "2025",
+    role: "Mobile Developer (Android & React Native)",
+    company: "Innovanitics",
+    roles: ["mobile", "web"],
+    summary:
+      "Enterprise mobile delivery for banking clients, on Android and React Native.",
+    highlights: [
+      "Contributed to UINSta, UBA's mobile app — built features for customer account creation, onboarding and setup.",
+      "Played a key role in a multi-tenant banking solution, designing and implementing the tenant architecture for multiple financial institutions.",
+      "Built proof-of-concept apps tailored to individual banks to demonstrate the platform and speed up client adoption.",
+      "Found and fixed deployment bugs to keep releases stable.",
+    ],
+    tags: ["Android", "React Native", "Multi-tenant architecture", "Banking"],
+  },
+  {
+    id: "kodehauz-lead",
+    period: "2019 — Present",
+    role: "Senior Technical Lead & Operations Manager · Lead Mobile Developer",
     company: "KodeHauz Solutions Planet",
-    description:
-      "Leading end-to-end development of production Flutter applications for international clients across fintech, healthcare, and e-commerce verticals. Architecting scalable solutions using clean architecture principles, managing client relationships, and delivering high-quality apps on schedule.",
-    tags: ["Flutter", "NodeJs", "Fast API", "Clean Architecture", "Riverpod", "REST APIs", "Remote"],
+    roles: ["mobile", "leadership", "design"],
+    summary:
+      "Leads the mobile team building apps for the company and its clients.",
+    highlights: [
+      "Led the mobile development team building solutions for KodeHauz and its clients.",
+      "Turned client requirements into working software, then tested and refined it before rollout.",
+      "Client work includes Radio Basar, Craftzone, Catholic Hymns & Liturgy, MSF and VanBoss.",
+    ],
+    tags: ["Flutter", "Kotlin", "Team leadership", "Client delivery"],
   },
   {
-    id: "mid",
-    period: "2023 — 2024",
-    role: "Flutter Developer",
-    company: "SoloRide",
-    description:
-      "Collaborated with cross-functional teams to build and ship mobile applications from concept to deployment. Implemented state management patterns, API integrations, and backend services while maintaining code quality through rigorous review processes.",
-    tags: ["RiverPod", "C# Backend", "SQLite", "Git Workflows", "Team Collaboration", "Google Maps API"],
+    id: "kodehauz-pm",
+    period: "2021 — Present",
+    role: "Program Manager, KodeCamp",
+    company: "KodeHauz Solutions Planet",
+    roles: ["leadership"],
+    summary:
+      "Runs KodeCamp, KodeHauz's online tech training program.",
+    highlights: [
+      "Led the team that delivered four KodeCamp bootcamps.",
+      "Managed the training platform through which 700+ trainees graduated across those four bootcamps.",
+      "Grew and managed a 4,000+ member online learning community.",
+    ],
+    tags: ["Program management", "Operations", "Community"],
   },
   {
-    id: "mentor",
-    period: "2024 — Present",
-    role: "Flutter Mentor & Technical Trainer",
-    company: "KodeCamp",
-    description:
-      "Mentored junior and intermediate developers in Flutter development, clean architecture patterns, and industry best practices. Conducted workshops on state management, clean code principles, and mobile app performance optimisation.",
-    tags: ["Mentoring", "Technical Training", "Flutter", "Architecture Patterns"],
+    id: "kodehauz-training-lead",
+    period: "2021 — 2022",
+    role: "Training Lead",
+    company: "KodeHauz Solutions Planet",
+    roles: ["leadership"],
+    summary: "Led the company's training arm.",
+    highlights: [
+      "Introduced training methods built to scale, growing both enrolment and training revenue.",
+    ],
+    tags: ["Curriculum", "Training operations"],
   },
-
+  {
+    id: "kodehauz-trainer",
+    period: "2020 — 2023",
+    role: "Trainer",
+    company: "KodeHauz Solutions Planet",
+    roles: ["mobile", "design", "leadership"],
+    summary: "Taught mobile development, UX design and programming foundations.",
+    highlights: [
+      "Trained students in mobile app development, UX design, and programming foundations with Python.",
+      "Mentored trainees through their final projects.",
+    ],
+    tags: ["Mentoring", "UX design", "Mobile development"],
+  },
+  {
+    id: "kasi-clouds",
+    period: "2023",
+    role: "DevOps Engineer, Level 1",
+    company: "KASI CLOUDS Ltd",
+    roles: ["leadership", "web"],
+    summary: "Led training and development for the DevOps team.",
+    highlights: [
+      "Led the DevOps team's training and development.",
+      "Implemented development, testing and automation tooling and IT infrastructure.",
+      "Planned the team's structure, activities and project-management involvement.",
+    ],
+    tags: ["DevOps", "CI/CD", "Team structure"],
+  },
 ];
+
+export function experienceFor(roleId) {
+  return roleId ? EXPERIENCE.filter((e) => e.roles.includes(roleId)) : EXPERIENCE;
+}

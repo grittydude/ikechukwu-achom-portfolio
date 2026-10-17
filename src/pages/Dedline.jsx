@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { DEDLINE } from "../data/dedlineProduct";
 import Reveal from "../components/ui/Reveal";
 import PhoneFrame from "../components/ui/PhoneFrame";
@@ -22,9 +23,15 @@ export default function Dedline() {
               <a href={DEDLINE.demoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                 Try the Live Demo →
               </a>
-              <a href={DEDLINE.githubUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                View on GitHub
-              </a>
+              {DEDLINE.githubUrl ? (
+                <a href={DEDLINE.githubUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                  View on GitHub
+                </a>
+              ) : (
+                <Link to="/projects/dedline" className="btn btn-outline">
+                  Read the case study
+                </Link>
+              )}
             </div>
             <div className={styles.tech}>
               {DEDLINE.tech.map((t) => (

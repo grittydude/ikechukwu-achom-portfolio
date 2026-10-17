@@ -1,0 +1,64 @@
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.shape {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--accent);
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.contours {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero: tilted blob behind the person, like the reference */
+.hero {
+  width: min(400px, 82vw);
+  aspect-ratio: 1 / 1.02;
+}
+
+.hero .shape {
+  inset: 10% 6% 0 6%;
+  border-radius: 46% 54% 0 0 / 52% 48% 0 0;
+  transform: rotate(-4deg);
+}
+
+/* About: tall arch card */
+.about {
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 4.6;
+}
+
+.about .shape {
+  inset: 0;
+  border-radius: 50% 50% var(--radius-xl) var(--radius-xl) / 38% 38% var(--radius-xl) var(--radius-xl);
+}
+
+.photo {
+  position: relative;
+  width: 92%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.monogram {
+  align-self: center;
+  margin-top: 12%;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(96px, 16vw, 168px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke: 3px #fff;
+  user-select: none;
+}

@@ -9,9 +9,7 @@ export function ScrollProgressBar() {
     <div
       className={styles.progressBar}
       style={{ transform: `scaleX(${progress})` }}
-      role="progressbar"
-      aria-valuenow={Math.round(progress * 100)}
-      aria-label="Reading progress"
+      aria-hidden="true"
     />
   );
 }

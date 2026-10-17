@@ -1,0 +1,195 @@
+.visual {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 80% 15%, rgba(244, 81, 30, 0.22), transparent 45%),
+    linear-gradient(160deg, #fff4ee, var(--surface-2));
+  isolation: isolate;
+}
+
+.md {
+  aspect-ratio: 16 / 11;
+}
+
+.sm {
+  aspect-ratio: 16 / 10;
+}
+
+.lg {
+  aspect-ratio: 16 / 9;
+}
+
+/* Phones */
+.phones {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.phone {
+  position: absolute;
+  top: 14%;
+  width: 34%;
+  aspect-ratio: 9 / 18;
+  padding: 14px 10px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 5px solid var(--ink);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phoneBack {
+  left: 18%;
+  transform: rotate(-9deg);
+  opacity: 0.85;
+}
+
+.phoneFront {
+  left: 46%;
+  top: 10%;
+  transform: rotate(6deg);
+}
+
+.appIcon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.appName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+/* Browser */
+.browser {
+  width: 84%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.shot .browser {
+  width: 90%;
+}
+
+.browser img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.bar i:first-child {
+  background: var(--accent);
+}
+
+.browserBody {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.webTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Skeleton bars */
+.skel {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skelHead {
+  height: 10px;
+  width: 55%;
+  border-radius: 6px;
+  background: var(--ink);
+  opacity: 0.85;
+}
+
+.skelLine {
+  height: 7px;
+  border-radius: 6px;
+  background: var(--border-strong);
+}
+
+.skelBlock {
+  margin-top: 6px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--accent-tint);
+  border: 1px solid rgba(244, 81, 30, 0.25);
+}
+
+/* Program */
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.programNum {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(56px, 9vw, 96px);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.programLabel {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}

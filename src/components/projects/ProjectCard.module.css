@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 12px 20px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.linked:hover {
+  border-color: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.body {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.meta {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  letter-spacing: 0.02em;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Stretch the title link over the whole card */
+.stretch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.stretch:focus-visible {
+  outline: none;
+}
+
+.card:has(.stretch:focus-visible) {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.linked:hover .arrow {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.tagline {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.summary {
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* External links sit above the stretched link so they stay clickable */
+.links {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 14px;
+}

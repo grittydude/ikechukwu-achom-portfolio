@@ -38,6 +38,7 @@ export default function Books() {
       <section className={styles.intro}>
         <div className="section-inner">
           <SectionHeader
+            as="h1"
             tag="The Books"
             title="Mindset &"
             highlight="Discipline"

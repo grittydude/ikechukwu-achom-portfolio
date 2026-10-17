@@ -1,0 +1,153 @@
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+}
+
+.float {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.floatTop {
+  top: 14%;
+  left: -18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.floatNum {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.floatLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.floatBottom {
+  bottom: 22px;
+  right: -14px;
+  border-radius: var(--radius-pill);
+}
+
+.floatIcon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+}
+
+.copy > p:not(:global(.section-tag)) {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 560px;
+}
+
+.copy > p + p {
+  margin-top: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 18px 40px;
+  margin: 28px 0;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.stats dd {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.stats dt {
+  font-size: 13px;
+  color: var(--text-dim);
+  max-width: 150px;
+  line-height: 1.4;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 6px 16px 6px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow-wrap: anywhere;
+  transition: border-color 0.2s var(--ease);
+}
+
+.chips a:hover {
+  border-color: var(--ink);
+}
+
+.chipIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+  .floatTop {
+    left: 0;
+  }
+  .floatBottom {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

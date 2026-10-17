@@ -1,0 +1,26 @@
+// Education and certifications, from the CV.
+
+export const EDUCATION = [
+  {
+    id: "rsu",
+    school: "Rivers State University",
+    qualification: "BSc Computer Science",
+    year: "2018",
+  },
+];
+
+export const CERTIFICATIONS = [
+  { id: "pm", title: "Product Management Certification", issuer: "Udemy", year: "2022", roles: ["leadership", "design"] },
+  { id: "android", title: "The Complete Android 12 & Kotlin Development Masterclass", issuer: "Udemy", year: "2022", roles: ["mobile"] },
+  { id: "ios", title: "iOS & Swift — The Complete iOS App Development Bootcamp", issuer: "Udemy", year: "2022", roles: ["mobile"] },
+  { id: "web", title: "The Complete 2022 Web Development Bootcamp", issuer: "Udemy", year: "2022", roles: ["web"] },
+  { id: "devops", title: "Getting Started with DevOps", issuer: "Simplilearn", year: "2023", roles: ["leadership", "web"] },
+  { id: "data", title: "Data Science for Everyone", issuer: "DataCamp", year: "2022", roles: [] },
+  { id: "softskills", title: "Jobberman Soft Skills", issuer: "Jobberman", year: "2021", roles: ["leadership"] },
+  { id: "progfound", title: "Programming Foundations: Fundamentals", issuer: "LinkedIn Learning", year: "2020", roles: [] },
+  { id: "java", title: "Java Tutorial", issuer: "SoloLearn", year: "2019", roles: ["mobile"] },
+];
+
+export function certificationsFor(roleId) {
+  return roleId ? CERTIFICATIONS.filter((c) => c.roles.includes(roleId)) : CERTIFICATIONS;
+}

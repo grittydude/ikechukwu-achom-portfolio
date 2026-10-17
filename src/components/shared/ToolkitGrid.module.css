@@ -1,0 +1,71 @@
+.groups {
+  display: grid;
+  gap: 36px;
+}
+
+.groupTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 12px 18px;
+  border-radius: 70px 70px var(--radius-lg) var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface) 85%);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--accent-strong);
+}
+
+.card:nth-child(3n + 2) .mark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.card:nth-child(3n + 3) .mark {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

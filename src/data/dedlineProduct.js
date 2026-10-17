@@ -11,7 +11,8 @@ export const DEDLINE = {
   subheadline:
     "A cross-platform mobile app, built with Flutter, that helps you track important deadlines, subscriptions, and renewal dates — with smart reminders and a clean task management workflow, before any of them turn into a crisis.",
   demoUrl: "https://appetize.io/app/b_rx6upyfwsb6v7fyrwzulwjfb4i",
-  githubUrl: "https://github.com/theteemofficial/dedline",
+  // github.com/theteemofficial/dedline returns 404 (private or removed) as of 2026-10-17.
+  githubUrl: null,
   tech: ["Flutter", "Supabase", "Riverpod", "Freezed", "Clean Architecture"],
 
   problem:
