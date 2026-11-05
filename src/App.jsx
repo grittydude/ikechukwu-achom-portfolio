@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { SHOW_CASE_STUDIES } from "./data/settings";
 
 import "./styles/tokens.css";
 import "./styles/base.css";
@@ -42,7 +43,10 @@ export default function App() {
             <Route key={r.id} path={r.path} element={<RolePage roleId={r.id} />} />
           ))}
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<CaseStudy />} />
+          <Route
+            path="/projects/:slug"
+            element={SHOW_CASE_STUDIES ? <CaseStudy /> : <Navigate to="/projects" replace />}
+          />
           <Route path="/about" element={<About />} />
 
           {/* Writing & product pages from the previous site — kept, out of the main nav */}

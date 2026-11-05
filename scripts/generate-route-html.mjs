@@ -54,7 +54,8 @@ const projectFiles = (await readdir(join(root, "content/projects"))).filter((f) 
 const projects = sortProjects(
   await Promise.all(projectFiles.map(async (f) => normalizeProject(f.replace(/.json$/, ""), await readJson(`content/projects/${f}`))))
 );
-const ROUTE_META = buildRouteMeta(roles, projects);
+const settings = await readJson("content/settings.json");
+const ROUTE_META = buildRouteMeta(roles, projects, { caseStudies: Boolean(settings.showCaseStudies) });
 
 const shell = await readFile(join(dist, "index.html"), "utf8");
 let count = 0;

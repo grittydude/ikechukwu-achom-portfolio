@@ -8,7 +8,7 @@ import styles from "./Footer.module.css";
 const EXPLORE = [
   { label: "Projects", to: "/projects" },
   { label: "About & Experience", to: "/about" },
-  { label: "Dedline", to: "/projects/dedline" },
+  { label: "Dedline", to: "/dedline" },
   { label: "Books", to: "/books" },
 ];
 

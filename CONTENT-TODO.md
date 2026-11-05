@@ -38,6 +38,8 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 
 ## Case-study gaps (by project)
 
+Case-study pages are **switched off** (2026-11-05) until there's enough real detail to publish. Fill in what you can via /admin; when ready, turn on **Site settings → Publish project case-study pages**.
+
 Fill these in /admin (Projects → Case study) or in `content/projects/<slug>.json`. Use real numbers only.
 
 - **Dedline**: outcomes (testers, release status), lessons learned. Confirm the "Product owner & Flutter engineer" role and whether anyone else contributed.

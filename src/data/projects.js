@@ -4,6 +4,7 @@
 // /projects/dedline. See CONTENT-TODO.md for evidence rules and gaps.
 
 import { normalizeProject, sortProjects } from "./normalize.js";
+import { SHOW_CASE_STUDIES } from "./settings.js";
 
 export { PROJECT_KINDS } from "./normalize.js";
 
@@ -16,4 +17,5 @@ export const PROJECTS = sortProjects(
 export const getProject = (slug) => PROJECTS.find((p) => p.slug === slug);
 export const projectsFor = (roleId) => PROJECTS.filter((p) => p.roles.includes(roleId));
 export const FEATURED_PROJECTS = PROJECTS.filter((p) => p.featured);
-export const hasCaseStudy = (p) => Boolean(p.caseStudy);
+/** True when a project's case-study page is published (see SHOW_CASE_STUDIES). */
+export const hasCaseStudy = (p) => SHOW_CASE_STUDIES && Boolean(p.caseStudy);

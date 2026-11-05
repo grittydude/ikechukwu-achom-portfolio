@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { DEDLINE } from "../data/dedlineProduct";
+import { getProject, hasCaseStudy } from "../data/projects";
 import Reveal from "../components/ui/Reveal";
 import PhoneFrame from "../components/ui/PhoneFrame";
 import CrossLink from "../components/shared/CrossLink";
@@ -28,9 +29,11 @@ export default function Dedline() {
                   View on GitHub
                 </a>
               ) : (
-                <Link to="/projects/dedline" className="btn btn-outline">
-                  Read the case study
-                </Link>
+                hasCaseStudy(getProject("dedline")) && (
+                  <Link to="/projects/dedline" className="btn btn-outline">
+                    Read the case study
+                  </Link>
+                )
               )}
             </div>
             <div className={styles.tech}>

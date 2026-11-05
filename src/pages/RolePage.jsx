@@ -26,7 +26,7 @@ import styles from "./RolePage.module.css";
 export default function RolePage({ roleId }) {
   const role = getRole(roleId);
   const projects = projectsFor(roleId);
-  const showcased = projects.filter(hasCaseStudy).slice(0, 4);
+  const showcased = projects.slice(0, 4);
   const more = projects.filter((p) => !showcased.includes(p));
   const experience = experienceFor(roleId);
   const certs = certificationsFor(roleId);

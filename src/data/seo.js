@@ -45,13 +45,16 @@ const STATIC_ROUTES = [
   },
 ];
 
-/** @param roles ROLES  @param projects normalized PROJECTS */
-export function buildRouteMeta(roles, projects) {
+/**
+ * @param roles ROLES  @param projects normalized PROJECTS
+ * @param options.caseStudies include /projects/<slug> pages (settings.showCaseStudies)
+ */
+export function buildRouteMeta(roles, projects, { caseStudies = true } = {}) {
   return [
     ...STATIC_ROUTES,
     ...roles.map((r) => ({ path: r.path, ...r.meta, priority: "0.9" })),
     ...projects
-      .filter((p) => p.caseStudy)
+      .filter((p) => caseStudies && p.caseStudy)
       .map((p) => ({
         path: `/projects/${p.slug}`,
         title: `${p.title} — ${p.tagline} | Ikechukwu Achom`,
