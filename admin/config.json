@@ -884,6 +884,14 @@
           "format": "json",
           "fields": [
             {
+              "name": "showCaseStudies",
+              "label": "Publish project case-study pages",
+              "widget": "boolean",
+              "default": false,
+              "required": false,
+              "hint": "Off: project cards don't open a page and old /projects/<name> links go to the projects list. Case-study text you enter is kept either way."
+            },
+            {
               "name": "showSourceLinks",
               "label": "Show “Source code” links on projects",
               "widget": "boolean",
