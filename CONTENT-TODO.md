@@ -11,7 +11,7 @@ In `npm run dev`, every missing case-study field shows as a dashed orange "Missi
 - **References**: the public CV (`public/cv/`) now says "References available on request". Referee names and numbers were removed from the page, the accessibility tags and the bookmarks. Your original file in Downloads is unchanged.
 - **Availability**: open to mobile and web development, product design, technical leadership and product management roles.
 - **GitHub**: `github.com/grittydude` is the main profile everywhere.
-- **Projects (2026-10-17)**: KodeCamp updated (7 bootcamps, 10,000+ participants, kode.camp); MSF renamed Saleslify; Go removed; RMS listed as a client project; iFusion listed as a confidential company project; project "Source code" links hidden (turn back on in /admin → Site content → Site settings).
+- **Projects (2026-10-17)**: KodeCamp updated (7 bootcamps, 10,000+ participants, kode.camp); Go, Saleslify (formerly MSF) and iFusion removed; RMS listed as a client project; project "Source code" links hidden (turn back on in /admin → Site content → Site settings).
 - **Portrait**: added (`public/images/ikechukwu-achom.webp`) and used in the share image.
 
 ## Still worth a look
@@ -45,9 +45,9 @@ Fill these in /admin (Projects → Case study) or in `content/projects/<slug>.js
 - **Multi-tenant Banking & UINSta**: approach and decisions you can describe without breaching confidentiality (for example, how tenant configuration worked at a high level), and any outcomes you're allowed to share.
 - **Craftzone**: the problem, decisions behind the UI revamp, outcomes. Is it still on Google Play? Add the link if so.
 - **King of Glory Healthcare / Bezimeni / House on the Rock**: your exact role (design and build? build only?), the problem, approach and outcomes. Stack for House on the Rock.
-- **Blood Donation, Mentors Tower, VanBoss, MSF, Radio Basar, Catholic Hymns, Go, IoTApp**: problem, decisions, outcomes and lessons for each, plus team size where you led one.
-- **Chota, Legogi**: your role and the actual stack. The current stack for Chota comes from the old site and is unverified. Neither has a case study yet.
-- **RMS, iFusion**: only a one-line description exists. Add platform, role, stack and status, or set them aside until there's more to show. Confirm iFusion can be shown publicly.
+- **Blood Donation, Mentors Tower, VanBoss, Radio Basar, Catholic Hymns, IoTApp**: problem, decisions, outcomes and lessons for each, plus team size where you led one.
+- **Chota, Legogi**: your role and the actual stack. The current stack for Chota comes from the old site and is unverified. Both case studies only have an overview so far.
+- **RMS**: only a one-line description exists. Add platform, role, stack and status, or set it aside until there's more to show.
 - **SoloRide**: the previous site listed SoloRide as a 2023–2024 Flutter role, but it isn't on the CV, so it was left out. Add it to the CV first if it should appear.
 
 ## Removed from the previous site (still in git history)
@@ -65,4 +65,4 @@ screenshot: { src: "projects/dedline/cover.webp", alt: "Dedline subscription lis
 screens: [{ src: "projects/dedline/add.webp", alt: "Adding a subscription", caption: "Add subscription" }],
 ```
 
-In `npm run dev`, each case study shows dashed placeholder slots naming the screens worth capturing (`screenSlots` in `projects.js`). Production hides the gallery until real screens exist. Confidential projects (banking, iFusion) never show a gallery. WebP, about 1200px on the long side, keeps pages fast.
+In `npm run dev`, each case study shows dashed placeholder slots naming the screens worth capturing (`screenSlots` in each project file). Production hides the gallery until real screens exist. Confidential projects (banking) never show a gallery. WebP, about 1200px on the long side, keeps pages fast.

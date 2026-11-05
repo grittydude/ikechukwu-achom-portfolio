@@ -30,11 +30,10 @@
       "capabilities": [
         {
           "title": "Flutter & Dart",
-          "body": "Feature-first Flutter apps with Riverpod, go_router and Freezed. Dedline, VanBoss and Saleslify are Flutter builds; Blood Donation was rebuilt in Flutter from Kotlin.",
+          "body": "Feature-first Flutter apps with Riverpod, go_router and Freezed. Dedline and VanBoss are Flutter builds; Blood Donation was rebuilt in Flutter from Kotlin.",
           "evidence": [
             "dedline",
             "vanboss",
-            "saleslify",
             "blood-donation-app"
           ]
         },
@@ -202,7 +201,6 @@
           "title": "Wireframes to working UI",
           "body": "Turned designers' wireframes and mockups into interactive, responsive Flutter components, with custom widgets, animations and gestures.",
           "evidence": [
-            "saleslify",
             "vanboss",
             "radio-basar"
           ]
